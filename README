@@ -1,0 +1,15 @@
+APLS (NZ) Drupal 7 theme
+=================================
+
+This is the Drupal 7 theme for the APLS (NZ) website (http://www.apls.org.nz).
+
+Recommended modules
+-------------------
+
+- ctools
+- google_analytics
+- link
+- pathauto
+- token
+- wysiwyg
+- xmlsitemap
