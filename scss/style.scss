@@ -102,7 +102,7 @@ header {
             }
         }
         
-        #block-system-user-menu {        
+        #block-system-user-menu, #block-user-login {        
             text-align: right;
             
             h2, li {                
@@ -123,9 +123,50 @@ header {
     }
 }
 
+footer {
+    clear: left;
+    margin: 0 0 0 1.1em;
+    padding: 0 0 1.5em 0;
+    text-transform: uppercase;
+    font-family: $sansseriffont;
+      
+    @media screen and (min-width: 61.5em) {
+        margin-left: $cols5 + $gutter/$em + 1.1;
+    }
+    
+    nav {
+        ul.menu {               
+            li {
+                list-style: none;
+                float: left;
+                margin: 0 1.1em 0 0;
+                padding: 0;
+                font-size: 0.9em;
+                
+                a {
+                    color: $navtext;
+                    text-decoration: none;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                        color: $hovertext;
+                    }
+                }
+            }
+        }
+    }
+    
+    div.region-footer-bottom {
+        clear: left;
+        padding-top: 0.5em;
+        color: #666;
+        font-size: 0.9em;
+    }
+}
+
 div#main {
     clear: left;
-    padding: 20px 0 10px 0;
+    padding: 20px 0 20px 0;
     margin: 0 $gutter;
     
     div#content-header {
@@ -147,6 +188,7 @@ div#main {
 }
 
 body.node-type-homepage {
+
     h1#page-title {
         display: none;
     }
