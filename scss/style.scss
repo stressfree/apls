@@ -1,0 +1,251 @@
+@import "frameless";
+
+@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+
+$hovertext: #ff3333;
+$headertext: #414042;
+$navtext: #333;
+$navlink: #787778;
+$darktext: #05515b;
+$darkgreen: #98cccd;
+$lightgreen: #e5f4f3;
+$white: #fff;
+
+$seriffont: 'Merriweather', 'Georgia', 'Times', 'Times New Roman', serif;
+$sansseriffont: 'Pontano Sans', 'Helvetica', 'Arial', sans-serif;
+$bodyfont: 'Helvetica', 'Arial', sans-serif;
+
+body {
+    padding-top: 10px;
+    line-height: 1.4em;
+}
+
+a:hover {
+    color: $hovertext;
+}
+
+#page {
+    margin: 0 auto;
+    
+    @media screen and (min-width: 61.5em) {
+        width: $gutter/$em + $cols14 + $gutter/$em;    
+    }
+}
+
+header {
+    margin: 0 $gutter;
+    font-family: $sansseriffont;
+    
+    #logo {
+        position: absolute;
+        width: $cols4;
+        height: 133px;
+    }
+    
+    hgroup {
+        width: $cols4;
+        height: 133px;
+        float: left;
+        
+        h2 {
+            margin: 30px 10px 0 60px;
+            font-size: 1.2em;
+            font-weight: normal;
+            color: $headertext;
+        }
+    }    
+    
+    nav {
+        font-size: 1em;
+        float: right;                
+                
+        @media screen and (min-width: 61.5em) {
+            width: $cols9 + $gutter/$em;
+        }
+        
+        h2, div.content, ul, li {
+            display: inline;
+        }
+          
+        h2 {
+            font-size: 1em;
+            color: $navtext;
+            font-weight: normal;
+        }
+        li {
+            list-style: none;
+        }
+        
+        a {
+            color: $navlink;
+            text-decoration: none;
+            
+            &:hover {
+                color: $hovertext;
+                text-decoration: underline;
+            }
+        }
+        
+        #block-system-main-menu {
+            h2, li {
+                font-size: 1.1em;
+                margin: 0;
+                padding: 0 0 0 1.1em;
+                text-transform: uppercase;     
+            }
+                        
+            @media screen and (min-width: 61.5em) {
+                padding: 68px 0 5px 0;
+                width: $cols9 + $gutter/$em;
+                border-bottom: 3px solid $darkgreen;
+            }
+        }
+        
+        #block-system-user-menu {        
+            text-align: right;
+            
+            h2, li {                
+                font-size: 0.9em;
+                margin: 0;
+                padding: 0 0 0 0.6em;
+            }
+            li {
+                text-transform: uppercase;
+            }
+                        
+            @media screen and (min-width: 61.5em) {
+                width: $cols9 + $gutter/$em;
+                position: absolute;
+                top: 10px;
+            }
+        }
+    }
+}
+
+div#main {
+    clear: left;
+    padding: 20px 0 10px 0;
+    margin: 0 $gutter;
+    
+    div#content-header {
+        position: absolute;
+        
+        div.tabs {
+            position: relative;
+            top: -1.5em;
+        }
+    }
+    
+    div#main-content-footer {
+        clear: left;
+    }
+    
+    div#content-inner {
+        background: $lightgreen;
+    }
+}
+
+body.node-type-homepage {
+    h1#page-title {
+        display: none;
+    }
+    
+    @media screen and (min-width: 61.5em) {
+        div#sidebar-frame {
+            width: $gutter;
+            margin-left: $cols5;
+            min-height: 455px;
+            position: absolute;
+            z-index: 1000;
+            background: url('../images/sidebar-bg.png') top left no-repeat;
+        }
+    }
+    
+    div.group_content {
+        width: $cols5;
+        float: left;
+        min-height: 395px;
+        padding: 30px 0;
+        background: $darkgreen;
+        
+        div.field {
+            margin: 0 $gutter 0 $cols1;
+        }
+        
+        div.field-name-field-blurb {
+            color: $darktext;
+            margin-bottom: 1.5em;
+            
+            div.field-item {
+                font-size: 1.3em;
+                line-height: 1.5em;   
+                font-family: $seriffont;
+                text-shadow: 0px 1px 0px #e1e1e8;
+            }
+        }
+        
+        div.field-name-body {
+            color: $white;
+            margin-bottom: 1.5em;
+            font-family: $seriffont;
+        }
+        
+        div.field-name-field-links div.field-item {
+            text-transform: uppercase;
+            font-family: $sansseriffont;
+            color: $darktext; 
+            
+            &::before {
+                content: "\\\\ ";
+            }
+            
+            a {
+                color: $darktext;                
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    div.group_images {
+        width: $cols9 + $gutter/$em;
+        margin-left: $cols5;
+        
+        div.field-item {
+            position: absolute;
+        }
+    }
+}
+
+// Format the tabs
+ul.tabs {
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+        font-family: $bodyfont;
+        
+        &.active {
+            display: none;
+        }
+        a {
+            color: $white;
+            border: 1px solid $darkgreen;
+            background: $darkgreen;
+            
+            &:hover {
+                color: $hovertext;
+                border: 1px solid $darkgreen;
+                background: $lightgreen;
+            }     
+        }
+    }
+}
+
+@import "ie";
+@import "zoom";

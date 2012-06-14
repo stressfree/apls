@@ -79,7 +79,10 @@ html {
 	-ms-text-size-adjust: 100%;
 }
 
-	body {min-height: 100%; font-size: 100%;}
+body {
+    min-height: 100%;
+    font-size: 100%;
+}
 
 sub, sup {
 	font-size: 75%; 
@@ -142,11 +145,11 @@ input, textarea, button, select {
 */
 
 ::selection {
-	background: red;
+	background: #004c56;
 	color: white;
 }
 ::-moz-selection {
-	background: red;
+	background: #004c56;
 	color: white;
 }
 
@@ -158,36 +161,5 @@ img::-moz-selection {
 }
 
 body {
-	-webkit-tap-highlight-color: rgba(255,0,0, 0.62);
-}
-
-
-/*
-	Style overrides for IE6-8
-	http://jonikorpi.com/leaving-old-IE-behind/
-*/
-
-.ie {
-
-}
-
-
-/*
-	An easy way to zoom your entire layout in or out (as long as it's set in ems).
-	Just change the media queries to activate them.
-	Assuming your base font-size is 16:
-	- the first one zooms out by a factor of (16-2)/16 = 0.875
-	- the second one zooms in by a factor of (16+2)/16 = 1.125  
-*/
-
-@media screen and (max-width: 1px) {
-	body {
-		font-size: ($font-size - 2) / $em;
-	}
-}
-
-@media screen and (max-width: 1px) {
-	body {
-		font-size: ($font-size + 2) / $em;
-	}
+	-webkit-tap-highlight-color: rgba(0,76,86, 0.62);
 }

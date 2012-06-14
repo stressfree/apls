@@ -21,7 +21,7 @@ features[] = slogan
 features[] = search
 features[] = favicon
 
-stylesheets[all][] = css/default.css
+stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
 scripts[] = js/script.js

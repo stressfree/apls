@@ -35,11 +35,6 @@
 		   <?php if ($page['highlight']): ?>
 		   <div id="highlight"><?php print render($page['highlight']); ?></div>
 		   <?php endif; ?>
-           <?php print render($title_prefix); ?>
-           <?php if ($title): ?>
-           <h1 id="page-title"><?php print $title; ?></h1>
-           <?php endif; ?>
-           <?php print render($title_suffix); ?>
            <?php if ($tabs): ?>
            <div class="tabs"><?php print render($tabs); ?></div>
            <?php endif; ?>
@@ -49,8 +44,14 @@
            <?php endif; ?>
           </div>
         <?php endif; ?>
+        <div id="sidebar-frame"><!-- --></div>
         <div id="main-content">
-          <?php print render($page['content']) ?>
+           <?php print render($title_prefix); ?>
+           <?php if ($title): ?>
+           <h1 id="page-title"><?php print $title; ?></h1>
+           <?php endif; ?>
+           <?php print render($title_suffix); ?>
+           <?php print render($page['content']) ?>
         </div>
 		<div id="main-content-footer">
 	        <?php print $feed_icons; ?>
