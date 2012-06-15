@@ -10,6 +10,7 @@ $navlink: #787778;
 $darktext: #05515b;
 $darkgreen: #98cccd;
 $lightgreen: #e5f4f3;
+$darkbackground: #004c56;
 $white: #fff;
 
 $seriffont: 'Merriweather', 'Georgia', 'Times', 'Times New Roman', serif;
@@ -119,6 +120,65 @@ header {
                 position: absolute;
                 top: 10px;
             }
+        }
+        
+        #block-user-login {
+            h2 {
+                text-transform: uppercase;
+                cursor: pointer;
+                
+                &.selected {
+                    color: $navlink;
+                }
+            }
+            
+            div.content {
+                position: relative;
+                left: -($cols6 + 1);    
+                top: 0.2em;
+            }
+            
+            form {            
+                position: absolute;    
+                z-index: 1500; 
+                border: 1px solid $darkgreen;
+                width: $cols6;
+                background: $lightgreen;
+                padding: 0 1em 0 0;
+            }
+            
+            label {
+                display: inline;
+                padding: 0 0.5em 0 0;
+            }
+            
+            span.form-required {
+                display: none;
+            }
+            
+            input.form-text {
+                width: $cols3;
+            }
+            
+            
+            ul li {            
+                text-transform: uppercase;
+                font-family: $sansseriffont;
+                color: $darktext; 
+            
+                &::before {
+                    content: "\\\\ ";
+                }
+            
+                a {
+                    color: $darktext;                
+                    text-decoration: none;
+                
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }                     
         }
     }
 }
@@ -260,8 +320,66 @@ body.node-type-homepage {
         div.field-item {
             position: absolute;
         }
+        
+        div.image-counter {
+            position: absolute;
+            margin-top: 400px;
+            text-align: right;
+            width: $cols9 - $gutter/$em;
+            
+            li {
+                float: right;
+                width: 16px;
+                height: 16px;
+                background: #dadcdc;
+                -moz-border-radius: 9px;
+                -webkit-border-radius: 9px;
+                -khtml-border-radius: 9px;
+                border-radius: 9px;
+                list-style: none;
+                margin: 0 10px 0 0;
+                
+                a {
+                    display: block;
+                    height: 16px;
+                    width: 16px;
+                    -moz-border-radius: 9px;
+                    -webkit-border-radius: 9px;
+                    -khtml-border-radius: 9px;
+                    border-radius: 9px;
+                    background: #fff;
+                }
+            }
+        }        
     }
 }
+
+
+label {
+    font-weight: normal;
+    font-family: $seriffont;
+    color: $darktext;
+}
+input {
+    &.form-text {
+        background: #fff;
+        border: 1px solid #fff;
+        font-family: 'Helvetica', 'Arial', sans-serif
+    }
+    &.form-submit {
+        background: $darkbackground;
+        text-transform: uppercase;
+        border: 1px solid $darkgreen;
+        font-family: $seriffont;
+        color: #fff;
+        padding: 0.3em 0.7em 0.2em 0.7em;
+                
+        &:hover {
+            background: $darkgreen;
+        }
+    }
+}
+
 
 // Format the tabs
 ul.tabs {

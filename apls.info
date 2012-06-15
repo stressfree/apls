@@ -24,7 +24,7 @@ features[] = favicon
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
-scripts[] = js/script.js
+scripts[] = js/script.min.js
 
 settings[wireframe_mode] = 0
 settings[clear_registry] = 0
