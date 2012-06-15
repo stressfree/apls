@@ -2,10 +2,10 @@
 
 Drupal.behaviors.aplsHomepage = {
   attach: function (context, settings) {
-        $('#block-user-login div.content').addClass('element-invisible');
+        $('#block-user-login div.content').toggle();
         $('#block-user-login h2').click(function(e) {
             $('#block-user-login h2').toggleClass('selected');
-           $('#block-user-login div.content').toggleClass('element-invisible');
+            $('#block-user-login div.content').toggle();
         });
         
         function nextSlide(){
