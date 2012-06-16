@@ -142,6 +142,7 @@ header {
                 
                 h2 {
                     display: inline;
+                    margin-left: $gutter;
                 }
             }
         }
@@ -305,6 +306,18 @@ div#main {
         }
     }
     
+    div#main-content {
+        div.content {
+            margin: 0 $gutter;
+            padding: $gutter 0;
+            
+            @media screen and (min-width: 61.5em) {
+                margin-left: $cols1;
+                padding: $cols1 0;
+            }            
+        }
+    }
+    
     div#main-content-footer {
         clear: left;
     }
@@ -332,6 +345,15 @@ body.node-type-homepage {
 
     div#page-title {
         display: none;
+    }
+    
+    div#main {
+        div#main-content {
+            div.content {
+                padding: 0;
+                margin: 0;
+            }
+        }
     }
     
     div.group_content {
@@ -446,7 +468,7 @@ body.node-type-homepage {
 body.page-contact {
 
     div#page-title {
-        padding: 0;
+        padding: $gutter 0 0 0;
         margin: 0;
         background: $darkgreen;
         
@@ -455,12 +477,13 @@ body.page-contact {
         }
         
         h1 {
-            font-size: 2em;
+            font-size: 1.9em;
+            line-height: 1em;
             font-family: $seriffont;
             font-weight: normal;
             color: $darktext;
             margin: 0;
-            padding: 1.4em 0 0.4em 4px;
+            padding: 0 0 5px 4px;
         }
                
         @media screen and (min-width: 43.5em) {
@@ -469,6 +492,7 @@ body.page-contact {
         
         @media screen and (min-width: 61.5em) {
             width: $cols5;
+            padding-top: $cols1;
             float: left;
             height: 100%;
             position: absolute;
