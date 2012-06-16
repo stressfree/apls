@@ -5,8 +5,9 @@
 
 $hovertext: #ff3333;
 $headertext: #414042;
-$navtext: #333;
-$navlink: #787778;
+$navtext: #ccc;
+$navlink: #333;
+$navselected: #787778;
 $darktext: #05515b;
 $darkgreen: #98cccd;
 $lightgreen: #e5f4f3;
@@ -90,10 +91,6 @@ header {
                 
         @media screen and (min-width: 61.5em) {
             width: $cols9 + $gutter/$em;
-            
-            h2 {
-                display: inline;
-            }
         }
         
         div.content, ul, li {
@@ -112,6 +109,11 @@ header {
         a {
             color: $navlink;
             text-decoration: none;
+            
+            &.active-trail {
+                font-weight: bold;
+                color: $navselected;
+            }
             
             &:hover {
                 color: $hovertext;
@@ -137,6 +139,10 @@ header {
                 h2, li {
                     font-size: 1.1em;
                 }
+                
+                h2 {
+                    display: inline;
+                }
             }
         }
         
@@ -145,11 +151,16 @@ header {
             position: absolute;
             top: 10px;
             
+            h2 {
+                display: inline;
+            }
+            
             h2, li {                
                 font-size: 0.9em;
                 margin: 0;
                 padding: 0 0 0 0.6em;
             }
+            
             li {
                 text-transform: uppercase;
             }
@@ -167,9 +178,20 @@ header {
             h2 {
                 text-transform: uppercase;
                 cursor: pointer;
+                color: $navlink;
+                
+                &:hover {
+                    text-decoration: underline;
+                    color: $hovertext;
+                }
                 
                 &.selected {
-                    color: $navlink;
+                    color: $navselected;
+                    font-weight: bold;
+                    
+                    &:hover {                       
+                        color: $hovertext;
+                    }
                 }
             }
             
@@ -220,6 +242,7 @@ header {
                 
                     &:hover {
                         text-decoration: underline;
+                        color: $hovertext;
                     }
                 }
             }                     
@@ -248,7 +271,7 @@ footer {
                 font-size: 0.9em;
                 
                 a {
-                    color: $navtext;
+                    color: $navlink;
                     text-decoration: none;
                     
                     &:hover {
@@ -288,24 +311,27 @@ div#main {
     
     div#content-inner {
         background: $lightgreen;
-    }
-}
-
-body.node-type-homepage {
-
-    h1#page-title {
-        display: none;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
     }
     
     @media screen and (min-width: 61.5em) {
         div#sidebar-frame {
             width: $gutter;
             margin-left: $cols5;
-            min-height: 455px;
+            height: 100%;
             position: absolute;
             z-index: 1000;
             background: url('../images/sidebar-bg.png') top left no-repeat;
         }
+    }
+}
+
+body.node-type-homepage {
+
+    div#page-title {
+        display: none;
     }
     
     div.group_content {
@@ -349,6 +375,7 @@ body.node-type-homepage {
                 
                 &:hover {
                     text-decoration: underline;
+                    color: $hovertext;
                 }
             }
         }
@@ -413,6 +440,59 @@ body.node-type-homepage {
                 }
             }
         }        
+    }
+}
+
+body.page-contact {
+
+    div#page-title {
+        padding: 0;
+        margin: 0;
+        background: $darkgreen;
+        
+        div.title-content {
+            margin: 0 $gutter;
+        }
+        
+        h1 {
+            font-size: 2em;
+            font-family: $seriffont;
+            font-weight: normal;
+            color: $darktext;
+            margin: 0;
+            padding: 1.4em 0 0.4em 4px;
+        }
+               
+        @media screen and (min-width: 43.5em) {
+            width: $cols9 + $gutter/$em;
+        }
+        
+        @media screen and (min-width: 61.5em) {
+            width: $cols5;
+            float: left;
+            height: 100%;
+            position: absolute;
+            
+            div.title-content {
+                margin-left: $cols1;
+                
+                h1 {
+                    font-size: 3em;
+                    border-bottom: 2px dashed #fff;
+                }
+            }
+        }
+    }
+    
+    div.region-content {
+    
+        @media screen and (min-width: 43.5em) {
+            width: $cols9 + $gutter/$em;
+        }
+            
+        @media screen and (min-width: 61.5em) {
+            margin-left: $cols5;
+        }
     }
 }
 

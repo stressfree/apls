@@ -44,14 +44,18 @@
            <?php endif; ?>
           </div>
         <?php endif; ?>
+        <div id="page-title">
+            <div class="title-content">
+                <?php print render($title_prefix); ?>
+                <?php if ($title): ?>
+                <h1><?php print $title; ?></h1>
+                <?php endif; ?>
+                <?php print render($title_suffix); ?>
+            </div>
+        </div>
         <div id="sidebar-frame"><!-- --></div>
-        <div id="main-content">
-           <?php print render($title_prefix); ?>
-           <?php if ($title): ?>
-           <h1 id="page-title"><?php print $title; ?></h1>
-           <?php endif; ?>
-           <?php print render($title_suffix); ?>
-           <?php print render($page['content']) ?>
+        <div id="main-content">           
+            <?php print render($page['content']) ?>
         </div>
 		<div id="main-content-footer">
 	        <?php print $feed_icons; ?>
