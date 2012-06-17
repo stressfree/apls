@@ -21,6 +21,7 @@ $bodyfont: 'Helvetica', 'Arial', sans-serif;
 body {
     padding-top: 10px;
     line-height: 1.4em;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 a:hover {
@@ -501,10 +502,19 @@ body.page-contact {
                 margin-left: $cols1;
                 
                 h1 {
-                    font-size: 3em;
+                    font-size: 2.2em;
                     border-bottom: 2px dashed #fff;
                 }
             }
+        }
+    }
+    
+    div#main-content {
+        div.block-block div.content {
+            padding-bottom: 0!important;
+        }
+        div.block-system div.content {
+            padding-top: 0!important;
         }
     }
     
