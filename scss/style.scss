@@ -311,22 +311,85 @@ div#main {
         }
     }
     
+    div#page-title {
+        padding: $gutter 0 0 0;
+        margin: 0;
+        background: $darkgreen;
+        
+        div.title-content {
+            margin: 0 $gutter;
+        }
+        
+        h1 {
+            font-size: 1.9em;
+            line-height: 1.2em;
+            font-family: $seriffont;
+            font-weight: normal;
+            color: $darktext;
+            margin: 0;
+            padding: 0 0 7px 7px;
+        }
+               
+        @media screen and (min-width: 43.5em) {
+            width: $cols9 + $gutter/$em;
+        }
+        
+        @media screen and (min-width: 64.5em) {
+            width: $cols5;
+            padding-top: $cols1;
+            float: left;
+            height: 100%;
+            position: absolute;
+            
+            div.title-content {
+                margin-left: 2 * $gutter - 7;
+                
+                h1 {
+                    font-size: 2.2em;
+                    border-bottom: 2px dashed #fff;
+                }
+            }
+        }
+    }
+    
     div#main-content {
+        
+        div.region-content {
+            @media screen and (min-width: 43.5em) {
+                width: $cols9 + $gutter/$em;
+            }
+            
+            @media screen and (min-width: 64.5em) {
+                margin-left: $cols5;
+                min-height: 455px;
+            }
+        }
+    
         div.content {
             margin: 0 $gutter;
             padding: $gutter 0;
+            
+            div.content {
+                margin: 0;
+                padding: 0;
+            }
             
             h2, h3, h4, h5, h6 {
                 font-family: $seriffont;
                 color: $darktext;
                 font-weight: normal;
                 margin: 0 0 0.3em 0;
+                padding: 0.8em 0 0 0;
             }
             
             p {
                 margin: 0 0 0.6em 0;
             }     
 
+            ul {
+                margin: 0.3em 0 0.8em 0;
+            }
+            
             li {
                 margin: 0 0 0.3em 0;
                 padding: 0 0 0 18px;
@@ -344,10 +407,50 @@ div#main {
                 background: none;
                 clear: left;
             }
+        
+            div.field-name-field-links div.field-item {
+                text-transform: uppercase;
+                font-family: $sansseriffont;
+                color: $darktext; 
+                
+                &::before {
+                    content: "\\\\ ";
+                }
+                
+                a {
+                    color: $darktext;                
+                    text-decoration: none;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                        color: $hovertext;
+                    }
+                }
+            }
             
+            div.group_sidebar {
+                div.field-name-field-sidebar-title div.field-item {
+                    font-size: 1.2em;
+                    line-height: 1.4em;
+                    margin: 0 0 0.4em;
+                    color: #fff;
+                    font-family: $seriffont;   
+                }
+            }
+                        
             @media screen and (min-width: 64.5em) {
                 margin-left: $cols1;
                 padding: $cols1 0;
+                
+                div.group_sidebar {
+                    position: absolute;
+                    top: 200px;
+                    margin-left: -$cols5;
+                    
+                    div.field {
+                        width: $cols4;
+                    }
+                }
             }
         }
     }
@@ -392,6 +495,11 @@ body.node-type-homepage {
     
     div#main {
         div#main-content {
+            div.region-content {
+                width: auto;
+                margin: 0;
+            }
+            
             div.content {
                 padding: 0;
                 margin: 0;
@@ -449,26 +557,6 @@ body.node-type-homepage {
             color: $white;
             margin-bottom: 1.5em;
             font-family: $seriffont;
-        }
-        
-        div.field-name-field-links div.field-item {
-            text-transform: uppercase;
-            font-family: $sansseriffont;
-            color: $darktext; 
-            
-            &::before {
-                content: "\\\\ ";
-            }
-            
-            a {
-                color: $darktext;                
-                text-decoration: none;
-                
-                &:hover {
-                    text-decoration: underline;
-                    color: $hovertext;
-                }
-            }
         }
               
         @media screen and (min-width: 43.5em) {
@@ -536,47 +624,6 @@ body.node-type-homepage {
 }
 
 body.page-contact {
-
-    div#page-title {
-        padding: $gutter 0 0 0;
-        margin: 0;
-        background: $darkgreen;
-        
-        div.title-content {
-            margin: 0 $gutter;
-        }
-        
-        h1 {
-            font-size: 1.9em;
-            line-height: 1em;
-            font-family: $seriffont;
-            font-weight: normal;
-            color: $darktext;
-            margin: 0;
-            padding: 0 0 7px 4px;
-        }
-               
-        @media screen and (min-width: 43.5em) {
-            width: $cols9 + $gutter/$em;
-        }
-        
-        @media screen and (min-width: 64.5em) {
-            width: $cols5;
-            padding-top: $cols1;
-            float: left;
-            height: 100%;
-            position: absolute;
-            
-            div.title-content {
-                margin-left: $cols1;
-                
-                h1 {
-                    font-size: 2.2em;
-                    border-bottom: 2px dashed #fff;
-                }
-            }
-        }
-    }
     
     div#main-content {
         div.block-block div.content {
@@ -604,17 +651,6 @@ body.page-contact {
                 
         textarea {
             height: 15em;
-        }
-    }
-    
-    div.region-content {
-    
-        @media screen and (min-width: 43.5em) {
-            width: $cols9 + $gutter/$em;
-        }
-            
-        @media screen and (min-width: 64.5em) {
-            margin-left: $cols5;
         }
     }
 }
