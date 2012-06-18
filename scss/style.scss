@@ -20,12 +20,16 @@ $bodyfont: 'Helvetica', 'Arial', sans-serif;
 
 body {
     padding-top: 10px;
-    line-height: 1.4em;
+    line-height: 1.5em;
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-a:hover {
-    color: $hovertext;
+a {
+    color: $darktext;
+    
+    &:hover {
+        color: $hovertext;    
+    }
 }
 
 #page {
@@ -35,7 +39,7 @@ a:hover {
         width: $cols10;
     }
     
-    @media screen and (min-width: 61.5em) {
+    @media screen and (min-width: 64.5em) {
         width: $gutter/$em + $cols14 + $gutter/$em;    
     }
 }
@@ -50,7 +54,7 @@ header {
         width: $cols2 + $gutter/$em;
         margin: 0 0 0 $gutter;
         
-        @media screen and (min-width: 61.5em) {
+        @media screen and (min-width: 64.5em) {
             margin-left: $cols1;
             width: $cols3 + $gutter/$em;
             height: 133px;
@@ -74,7 +78,7 @@ header {
             color: $headertext;
         }
         
-        @media screen and (min-width: 61.5em) {
+        @media screen and (min-width: 64.5em) {
             margin-left: $cols1;
             width: $cols3 + $gutter/$em;
             height: 133px;
@@ -90,7 +94,7 @@ header {
         float: right;
         width: $cols7 - $gutter/$em;         
                 
-        @media screen and (min-width: 61.5em) {
+        @media screen and (min-width: 64.5em) {
             width: $cols9 + $gutter/$em;
         }
         
@@ -133,12 +137,12 @@ header {
                 text-transform: uppercase;     
             }
                         
-            @media screen and (min-width: 61.5em) {
+            @media screen and (min-width: 64.5em) {
                 padding: 68px 0 5px 0;
                 width: $cols9 + $gutter/$em;
                 
                 h2, li {
-                    font-size: 1.1em;
+                    font-size: 1.05em;
                 }
                 
                 h2 {
@@ -171,7 +175,7 @@ header {
                 width: $cols7 - $gutter/$em;
             }
                
-            @media screen and (min-width: 61.5em) {
+            @media screen and (min-width: 64.5em) {
                 width: $cols9 + $gutter/$em;
             }
         }
@@ -201,7 +205,7 @@ header {
                 display: block;
                 margin: 0 0 0 30px;
                 
-                @media screen and (min-width: 61.5em) {
+                @media screen and (min-width: 64.5em) {
                     margin-left: 222px; 
                 }
             }
@@ -259,7 +263,7 @@ footer {
     text-transform: uppercase;
     font-family: $sansseriffont;
       
-    @media screen and (min-width: 61.5em) {
+    @media screen and (min-width: 64.5em) {
         margin-left: $cols5 + $gutter/$em + 1.1;
     }
     
@@ -312,10 +316,39 @@ div#main {
             margin: 0 $gutter;
             padding: $gutter 0;
             
-            @media screen and (min-width: 61.5em) {
+            h2, h3, h4, h5, h6 {
+                font-family: $seriffont;
+                color: $darktext;
+                font-weight: normal;
+                margin: 0 0 0.3em 0;
+            }
+            
+            p {
+                margin: 0 0 0.6em 0;
+            }     
+
+            li {
+                margin: 0 0 0.3em 0;
+                padding: 0 0 0 18px;
+                list-style: none;
+                background: url('../images/main-bullet.png') 0 0.3em no-repeat;
+            }
+            
+            hr {
+                border-top: 0px none;
+                border-bottom: 2px dashed $darktext;
+                border-left: 0px none;
+                border-right: 0px none;
+                margin: 0 0 2em 0;
+                padding: 1.5em 0 0 0;
+                background: none;
+                clear: left;
+            }
+            
+            @media screen and (min-width: 64.5em) {
                 margin-left: $cols1;
                 padding: $cols1 0;
-            }            
+            }
         }
     }
     
@@ -330,13 +363,22 @@ div#main {
         width: 100%;
     }
     
-    @media screen and (min-width: 61.5em) {
-        div#sidebar-frame {
+    div#sidebar-frame {
+        position: absolute;
+        z-index: 1500;
+        margin: 0;
+        padding: 0;
+            
+        @media screen and (min-width: 43.5em) {
+            width: $cols9 + $gutter/$em;
+            height: $gutter;
+            background: url('../images/horizontalbar-bg.png') top left no-repeat;
+        }
+    
+        @media screen and (min-width: 64.5em) {
             width: $gutter;
             margin-left: $cols5;
             height: 100%;
-            position: absolute;
-            z-index: 1000;
             background: url('../images/sidebar-bg.png') top left no-repeat;
         }
     }
@@ -354,6 +396,32 @@ body.node-type-homepage {
                 padding: 0;
                 margin: 0;
             }
+        }
+        
+        div#sidebar-frame {
+            display: none;
+                
+            @media screen and (min-width: 64.5em) {
+                display: inherit;
+            }
+        }
+    }
+        
+    div.group-dividertab {
+        width: $cols9 + $gutter/$em;
+        position: absolute;
+        height: $gutter;
+        margin: 0;
+        padding: 0;
+        z-index: 1500;
+        background: url('../images/horizontalbar-bg.png') top left no-repeat;
+        
+        h2 {
+            display: none;
+        }        
+        
+        @media screen and (min-width: 64.5em) {
+            display: none;
         }
     }
     
@@ -407,7 +475,7 @@ body.node-type-homepage {
             width: $cols9 + $gutter/$em;
         }
         
-        @media screen and (min-width: 61.5em) {
+        @media screen and (min-width: 64.5em) {
             width: $cols5;
             float: left;
             min-height: 395px;    
@@ -425,7 +493,7 @@ body.node-type-homepage {
             height: 455px;
         }
             
-        @media screen and (min-width: 61.5em) {
+        @media screen and (min-width: 64.5em) {
             margin-left: $cols5;
         }
         
@@ -443,13 +511,14 @@ body.node-type-homepage {
                 float: right;
                 width: 16px;
                 height: 16px;
-                background: #dadcdc;
+                background: none #dadcdc!important;
                 -moz-border-radius: 9px;
                 -webkit-border-radius: 9px;
                 -khtml-border-radius: 9px;
                 border-radius: 9px;
-                list-style: none;
-                margin: 0 10px 0 0;
+                list-style: none!important;
+                margin: 0 10px 0 0!important;
+                padding: 0!important;
                 
                 a {
                     display: block;
@@ -484,14 +553,14 @@ body.page-contact {
             font-weight: normal;
             color: $darktext;
             margin: 0;
-            padding: 0 0 5px 4px;
+            padding: 0 0 7px 4px;
         }
                
         @media screen and (min-width: 43.5em) {
             width: $cols9 + $gutter/$em;
         }
         
-        @media screen and (min-width: 61.5em) {
+        @media screen and (min-width: 64.5em) {
             width: $cols5;
             padding-top: $cols1;
             float: left;
@@ -516,6 +585,26 @@ body.page-contact {
         div.block-system div.content {
             padding-top: 0!important;
         }
+        
+        div.contactPerson, div.contactPhone {
+            margin: 0;
+        
+            @media screen and (min-width: 43.5em) {
+                width: $cols4;
+                float: left;
+                margin-right: $gutter;  
+            }
+        }
+        
+        div.contactPhone {
+            a {
+                text-decoration: none;
+            }
+        }
+                
+        textarea {
+            height: 15em;
+        }
     }
     
     div.region-content {
@@ -524,7 +613,7 @@ body.page-contact {
             width: $cols9 + $gutter/$em;
         }
             
-        @media screen and (min-width: 61.5em) {
+        @media screen and (min-width: 64.5em) {
             margin-left: $cols5;
         }
     }
@@ -540,7 +629,7 @@ input {
     &.form-text {
         background: #fff;
         border: 1px solid #fff;
-        font-family: 'Helvetica', 'Arial', sans-serif
+        font-family: 'Helvetica', 'Arial', sans-serif;
     }
     &.form-submit {
         background: $darkbackground;
@@ -554,6 +643,11 @@ input {
             background: $darkgreen;
         }
     }
+}
+textarea {
+    border: 1px solid #fff;
+    background: #fff;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 
