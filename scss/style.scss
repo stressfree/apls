@@ -34,14 +34,6 @@ a {
 
 #page {
     margin: 0 auto;
-         
-    @media screen and (min-width: 43.5em) {
-        width: $cols10;
-    }
-    
-    @media screen and (min-width: 64.5em) {
-        width: $gutter/$em + $cols14 + $gutter/$em;    
-    }
 }
 
 header {
@@ -53,12 +45,6 @@ header {
         height: 90px;
         width: $cols2 + $gutter/$em;
         margin: 0 0 0 $gutter;
-        
-        @media screen and (min-width: 64.5em) {
-            margin-left: $cols1;
-            width: $cols3 + $gutter/$em;
-            height: 133px;
-        }
         
         img {
             width: 100%;
@@ -77,26 +63,12 @@ header {
             font-weight: normal;
             color: $headertext;
         }
-        
-        @media screen and (min-width: 64.5em) {
-            margin-left: $cols1;
-            width: $cols3 + $gutter/$em;
-            height: 133px;
-            
-            h2 {
-                margin: 30px 10px 0 60px;                
-            }
-        } 
     }    
     
     nav {
         font-size: 1em;
         float: right;
-        width: $cols7 - $gutter/$em;         
-                
-        @media screen and (min-width: 64.5em) {
-            width: $cols9 + $gutter/$em;
-        }
+        width: $cols7 - $gutter/$em;
         
         div.content, ul, li {
             display: inline;
@@ -136,20 +108,6 @@ header {
                 padding: 0 0 0 1.1em;
                 text-transform: uppercase;     
             }
-                        
-            @media screen and (min-width: 64.5em) {
-                padding: 68px 0 5px 0;
-                width: $cols9 + $gutter/$em;
-                
-                h2, li {
-                    font-size: 1.05em;
-                }
-                
-                h2 {
-                    display: inline;
-                    margin-left: $gutter;
-                }
-            }
         }
         
         #block-system-user-menu, #block-user-login {        
@@ -169,14 +127,6 @@ header {
             
             li {
                 text-transform: uppercase;
-            }
-                
-            @media screen and (min-width: 43.5em) {
-                width: $cols7 - $gutter/$em;
-            }
-               
-            @media screen and (min-width: 64.5em) {
-                width: $cols9 + $gutter/$em;
             }
         }
         
@@ -204,10 +154,6 @@ header {
             div.content {
                 display: block;
                 margin: 0 0 0 30px;
-                
-                @media screen and (min-width: 64.5em) {
-                    margin-left: 222px; 
-                }
             }
             
             form {            
@@ -262,10 +208,6 @@ footer {
     padding: 0 0 1.5em 0;
     text-transform: uppercase;
     font-family: $sansseriffont;
-      
-    @media screen and (min-width: 64.5em) {
-        margin-left: $cols5 + $gutter/$em + 1.1;
-    }
     
     nav {
         ul.menu {               
@@ -329,42 +271,9 @@ div#main {
             margin: 0;
             padding: 0 0 7px 7px;
         }
-               
-        @media screen and (min-width: 43.5em) {
-            width: $cols9 + $gutter/$em;
-        }
-        
-        @media screen and (min-width: 64.5em) {
-            width: $cols5;
-            padding-top: $cols1;
-            float: left;
-            height: 100%;
-            position: absolute;
-            
-            div.title-content {
-                margin-left: 2 * $gutter - 7;
-                
-                h1 {
-                    font-size: 2.2em;
-                    border-bottom: 2px dashed #fff;
-                }
-            }
-        }
     }
     
-    div#main-content {
-        
-        div.region-content {
-            @media screen and (min-width: 43.5em) {
-                width: $cols9 + $gutter/$em;
-            }
-            
-            @media screen and (min-width: 64.5em) {
-                margin-left: $cols5;
-                min-height: 455px;
-            }
-        }
-    
+    div#main-content {    
         div.content {
             margin: 0 $gutter;
             padding: $gutter 0;
@@ -408,10 +317,12 @@ div#main {
                 clear: left;
             }
         
+            div.field-name-field-sidebar-files div.field-item,
             div.field-name-field-links div.field-item {
                 text-transform: uppercase;
                 font-family: $sansseriffont;
-                color: $darktext; 
+                color: $darktext;
+                margin-bottom: 0.2em;
                 
                 &::before {
                     content: "\\\\ ";
@@ -420,36 +331,34 @@ div#main {
                 a {
                     color: $darktext;                
                     text-decoration: none;
+                    font-size: 0.95em;
                     
                     &:hover {
                         text-decoration: underline;
                         color: $hovertext;
                     }
                 }
+                
+                img {
+                    display: none;
+                }
             }
             
             div.group_sidebar {
+                margin: 1.5em 0 0 0;
+            
                 div.field-name-field-sidebar-title div.field-item {
                     font-size: 1.2em;
                     line-height: 1.4em;
                     margin: 0 0 0.4em;
                     color: #fff;
-                    font-family: $seriffont;   
+                    font-family: $seriffont;                 
+                    padding: 1em 0 0.3em $gutter/2;
+                    background: $darkgreen;
                 }
-            }
-                        
-            @media screen and (min-width: 64.5em) {
-                margin-left: $cols1;
-                padding: $cols1 0;
-                
-                div.group_sidebar {
-                    position: absolute;
-                    top: 200px;
-                    margin-left: -$cols5;
-                    
-                    div.field {
-                        width: $cols4;
-                    }
+                div.field-name-field-sidebar-files,
+                div.field-name-field-links {
+                    margin: 0 0 0 $gutter/2;
                 }
             }
         }
@@ -471,19 +380,6 @@ div#main {
         z-index: 1500;
         margin: 0;
         padding: 0;
-            
-        @media screen and (min-width: 43.5em) {
-            width: $cols9 + $gutter/$em;
-            height: $gutter;
-            background: url('../images/horizontalbar-bg.png') top left no-repeat;
-        }
-    
-        @media screen and (min-width: 64.5em) {
-            width: $gutter;
-            margin-left: $cols5;
-            height: 100%;
-            background: url('../images/sidebar-bg.png') top left no-repeat;
-        }
     }
 }
 
@@ -508,10 +404,6 @@ body.node-type-homepage {
         
         div#sidebar-frame {
             display: none;
-                
-            @media screen and (min-width: 64.5em) {
-                display: inherit;
-            }
         }
     }
         
@@ -525,10 +417,6 @@ body.node-type-homepage {
         background: url('../images/horizontalbar-bg.png') top left no-repeat;
         
         h2 {
-            display: none;
-        }        
-        
-        @media screen and (min-width: 64.5em) {
             display: none;
         }
     }
@@ -558,33 +446,9 @@ body.node-type-homepage {
             margin-bottom: 1.5em;
             font-family: $seriffont;
         }
-              
-        @media screen and (min-width: 43.5em) {
-            width: $cols9 + $gutter/$em;
-        }
-        
-        @media screen and (min-width: 64.5em) {
-            width: $cols5;
-            float: left;
-            min-height: 395px;    
-            
-            div.field {       
-                margin-left: $cols1;
-            } 
-        }
     }
     
-    div.group_images {
-            
-        @media screen and (min-width: 43.5em) {
-            width: $cols9 + $gutter/$em;
-            height: 455px;
-        }
-            
-        @media screen and (min-width: 64.5em) {
-            margin-left: $cols5;
-        }
-        
+    div.group_images {        
         div.field-item {
             position: absolute;
         }
@@ -635,12 +499,6 @@ body.page-contact {
         
         div.contactPerson, div.contactPhone {
             margin: 0;
-        
-            @media screen and (min-width: 43.5em) {
-                width: $cols4;
-                float: left;
-                margin-right: $gutter;  
-            }
         }
         
         div.contactPhone {
@@ -713,5 +571,16 @@ ul.tabs {
     }
 }
 
-@import "ie";
+@media screen and (min-width: 43.5em) {
+    @import "tablet";
+}
+
+@media screen and (min-width: 64.5em) {
+    @import "desktop";
+}
+
+html.ie {
+    @import "desktop";
+    @import "ie";
+}
 @import "zoom";

@@ -29,21 +29,22 @@
   </header>
   <div id="main">
     <div id="content">
-      <div id="content-inner">
-        <?php if ($title|| $tabs || $action_links): ?>
-          <div id="content-header">
-		   <?php if ($page['highlight']): ?>
-		   <div id="highlight"><?php print render($page['highlight']); ?></div>
-		   <?php endif; ?>
-           <?php if ($tabs): ?>
-           <div class="tabs"><?php print render($tabs); ?></div>
-           <?php endif; ?>
-           <?php print render($page['help']); ?>
-           <?php if ($action_links): ?>
-           <ul class="action-links"><?php print render($action_links); ?></ul>
-           <?php endif; ?>
-          </div>
+      <?php if ($title|| $tabs || $action_links): ?>
+        <div id="content-header">
+		<?php if ($page['highlight']): ?>
+		<div id="highlight"><?php print render($page['highlight']); ?></div>
+		<?php endif; ?>
+        <?php if ($tabs): ?>
+        <div class="tabs"><?php print render($tabs); ?></div>
         <?php endif; ?>
+        <?php print render($page['help']); ?>
+        <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+      </div>
+      <?php endif; ?>
+      <div id="content-inner">
+        
         <div id="page-title">
             <div class="title-content">
                 <?php print render($title_prefix); ?>

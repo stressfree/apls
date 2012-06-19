@@ -1,0 +1,139 @@
+#page {
+    width: $gutter/$em + $cols14 + $gutter/$em;
+}
+
+header {    
+    #logo {
+        margin-left: $cols1;
+        width: $cols3 + $gutter/$em;
+        height: 133px;
+    }
+    
+    hgroup {
+        margin-left: $cols1;
+        width: $cols3 + $gutter/$em;
+        height: 133px;
+        
+        h2 {
+            margin: 30px 10px 0 60px;                
+        }
+    }
+    
+    nav {
+        width: $cols9 + $gutter/$em;
+        
+        #block-system-main-menu {                
+            padding: 68px 0 5px 0;
+            width: $cols9 + $gutter/$em;
+            
+            h2, li {
+                font-size: 1.05em;
+            }
+            
+            h2 {
+                display: inline;
+                margin-left: $gutter;
+            }
+        }
+    
+        #block-system-user-menu, #block-user-login {
+            width: $cols9 + $gutter/$em;
+        }
+        
+        #block-user-login {
+            div.content {
+                margin-left: 222px; 
+            }
+        }
+    }
+}
+
+footer {
+    margin-left: $cols5 + $gutter/$em + 1.1;
+}
+
+div#main {    
+    div#page-title {
+        width: $cols5;
+        padding-top: $cols1;
+        float: left;
+        height: 100%;
+        position: absolute;
+        
+        div.title-content {
+            margin-left: 2 * $gutter - 7;
+            
+            h1 {
+                font-size: 2.2em;
+                border-bottom: 2px dashed #fff;
+            }
+        }
+    }
+    
+    div#main-content {        
+        div.region-content {
+            margin-left: $cols5;
+            min-height: 455px;
+        } 
+    
+        div.content {
+            margin-left: $cols1;
+            padding: $cols1 0;
+            
+            div.group_sidebar {
+                position: absolute;
+                top: 200px;              
+                margin: 0;
+                margin-left: -$cols5;
+                padding: 0;
+                border-top: 0px none;
+                
+                
+                div.field {
+                    width: $cols4;
+                }
+                div.field-name-field-sidebar-title div.field-item {               
+                    padding: 0;
+                    background: $darkgreen;
+                }
+                div.field-name-field-sidebar-files,
+                div.field-name-field-links {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    div#sidebar-frame {
+        width: $gutter;
+        margin-left: $cols5;
+        height: 100%;
+        background: url('../images/sidebar-bg.png') top left no-repeat;
+    }
+}
+
+body.node-type-homepage {    
+    div#main {        
+        div#sidebar-frame {
+            display: inherit;
+        }
+    }
+    
+    div.group-dividertab {
+        display: none;
+    }
+    
+    div.group_content {
+        width: $cols5;
+        float: left;
+        min-height: 395px;    
+        
+        div.field {       
+            margin-left: $cols1;
+        } 
+    }
+    
+    div.group_images {
+        margin-left: $cols5;
+    }
+}

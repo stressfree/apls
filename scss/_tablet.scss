@@ -1,0 +1,50 @@
+#page {
+    width: $cols10;
+}
+
+header {        
+    nav {            
+        #block-system-user-menu, #block-user-login {
+            width: $cols7 - $gutter/$em;
+        }
+    }
+}
+
+div#main {                
+    div#page-title {
+        width: $cols9 + $gutter/$em;
+    }
+    
+    div#main-content {        
+        div.region-content {
+            width: $cols9 + $gutter/$em;
+        }
+    }
+
+    div#sidebar-frame {
+        width: $cols9 + $gutter/$em;
+        height: $gutter;
+        background: url('../images/horizontalbar-bg.png') top left no-repeat;
+    }
+}
+
+body.node-type-homepage {        
+    div.group_content {
+        width: $cols9 + $gutter/$em;
+    }
+    
+    div.group_images {
+        width: $cols9 + $gutter/$em;
+        height: 455px;  
+    }
+}
+
+body.page-contact {    
+    div#main-content {            
+        div.contactPerson, div.contactPhone {
+            width: $cols4;
+            float: left;
+            margin-right: $gutter;  
+        }
+    }
+}
