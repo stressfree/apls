@@ -80,6 +80,11 @@ div#main {
             margin-left: $cols1;
             padding: $cols1 0;
             
+            div.content {
+                margin: 0;
+                padding: 0;
+            }
+            
             div.group_sidebar {
                 position: absolute;
                 top: 200px;              
@@ -116,6 +121,18 @@ body.node-type-homepage {
     div#main {        
         div#sidebar-frame {
             display: inherit;
+        }
+        
+        div#main-content {
+            div.region-content {
+                width: auto;
+                margin: 0;
+            }
+            
+            div.content {
+                padding: 0;
+                margin: 0;
+            }             
         }
     }
     

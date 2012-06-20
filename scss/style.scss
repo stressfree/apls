@@ -19,7 +19,6 @@ $sansseriffont: 'Pontano Sans', 'Helvetica', 'Arial', sans-serif;
 $bodyfont: 'Helvetica', 'Arial', sans-serif;
 
 body {
-    padding-top: 10px;
     line-height: 1.5em;
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
@@ -38,6 +37,7 @@ a {
 
 header {
     margin: 0 $gutter;
+    padding: 10px 0 0 0;
     font-family: $sansseriffont;
     
     #logo {
