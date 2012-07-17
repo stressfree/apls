@@ -3,7 +3,27 @@
 }
 
 header {        
-    nav {            
+    nav {
+        float: right;
+        width: $cols7 - $gutter/$em;
+                        
+        div.content, ul, li {
+            display: inline;
+        }
+        
+        h2 {
+            display: block;
+        }
+        
+        #block-system-main-menu {
+            padding: 15px 0 5px 0;
+            border-bottom: 3px solid $darkgreen;
+            
+            li {
+                display: inline;
+            }
+        }
+        
         #block-system-user-menu, #block-user-login {
             width: $cols7 - $gutter/$em;
         }
