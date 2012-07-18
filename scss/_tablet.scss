@@ -2,7 +2,15 @@
     width: $cols10;
 }
 
-header {        
+header {
+    #logo {
+        margin: 0 0 0 $gutter;
+    }
+    
+    hgroup {
+        margin: 0 0 0 $gutter;
+    }
+       
     nav {
         float: right;
         width: $cols7 - $gutter/$em;
@@ -11,28 +19,105 @@ header {
             display: inline;
         }
         
-        h2 {
-            display: block;
-        }
-        
         #block-system-main-menu {
+            float: none; 
             padding: 15px 0 5px 0;
             border-bottom: 3px solid $darkgreen;
+            
+        
+            h2 {
+                display: block;
+            }
             
             li {
                 display: inline;
             }
+        }        
+        
+        #block-system-user-menu, #block-user-login {        
+            text-align: right;
+            position: absolute;
+            top: 10px;
+            width: $cols7 - $gutter/$em;
+            clear: none;
+            padding: 0;
+            
+            ul, li {
+                display: inline;
+            }
+            
+            h2 {
+                display: inline;
+            }
         }
         
-        #block-system-user-menu, #block-user-login {
-            width: $cols7 - $gutter/$em;
+        #block-user-login {
+                        
+            div.content {
+                display: block;
+                margin: 0 0 0 30px;
+            }
+            
+            form {            
+                position: absolute;    
+                z-index: 2000; 
+                width: $cols6;
+                padding: 0 1em 0 0;
+            }
+            
+            label {
+                display: inline;
+                padding: 0 0.5em 0 0;
+            }
+            
+            span.form-required {
+                display: none;
+            }
+            
+            input.form-text {
+                width: $cols3;
+            }
+            
+            
+            ul li {            
+                text-transform: uppercase;
+                font-family: $sansseriffont;
+                color: $darktext; 
+            
+                &::before {
+                    content: "\\\\ ";
+                }
+            
+                a {
+                    color: $darktext;                
+                    text-decoration: none;
+                
+                    &:hover {
+                        text-decoration: underline;
+                        color: $hovertext;
+                    }
+                }
+            }                     
         }
     }
 }
 
-div#main {                
+div#main {
+    margin: 0 $gutter;
+    padding: 20px 0;
+    
     div#page-title {
         width: $cols9 + $gutter/$em;
+        
+        h1 {
+            font-size: 1.9em;
+        }
+    }
+    
+    div#content-header {        
+        div.tabs {
+            top: -1.5em;
+        }
     }
     
     div#main-content {        
@@ -66,5 +151,11 @@ body.page-contact {
             float: left;
             margin-right: $gutter;  
         }
+    }
+}
+
+input {
+    &.form-text {
+        width: inherit;
     }
 }

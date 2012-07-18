@@ -33,6 +33,7 @@ a {
 
 #page {
     margin: 0 auto;
+    width: $cols5;
 }
 
 header {
@@ -44,7 +45,7 @@ header {
         position: absolute;
         height: 90px;
         width: $cols2 + $gutter/$em;
-        margin: 0 0 0 $gutter;
+        margin: 0;
         
         img {
             width: 100%;
@@ -55,7 +56,7 @@ header {
         width: $cols2 + $gutter/$em;
         height: 90px;
         float: left;
-        margin: 0 0 0 $gutter;
+        margin: 0;
         
         h2 {
             margin: 10px 10px;
@@ -74,6 +75,7 @@ header {
             color: $navtext;
             font-weight: normal;
         }
+        
         li {
             list-style: none;
         }
@@ -95,6 +97,7 @@ header {
         
         #block-system-main-menu {
             padding: 0;
+            float: right;
                 
             h2, li {
                 font-size: 1em;
@@ -102,16 +105,14 @@ header {
                 padding: 0 0 0 1.1em;
                 text-transform: uppercase;     
             }
+            li {
+                list-style: none;
+            }
         }
         
-        #block-system-user-menu, #block-user-login {        
-            text-align: right;
-            position: absolute;
-            top: 10px;
-            
-            h2 {
-                display: inline;
-            }
+        #block-system-user-menu, #block-user-login {
+            clear: both;
+            padding: 0.5em 0 0 0;
             
             h2, li {                
                 font-size: 0.9em;
@@ -126,6 +127,7 @@ header {
         
         #block-user-login {
             h2 {
+                display: block;
                 text-transform: uppercase;
                 cursor: pointer;
                 color: $navlink;
@@ -145,53 +147,11 @@ header {
                 }
             }
             
-            div.content {
-                display: block;
-                margin: 0 0 0 30px;
-            }
-            
-            form {            
-                position: absolute;    
-                z-index: 2000; 
+            form {
                 border: 1px solid $darkgreen;
-                width: $cols6;
                 background: $lightgreen;
-                padding: 0 1em 0 0;
+                padding: 0 0.5em;
             }
-            
-            label {
-                display: inline;
-                padding: 0 0.5em 0 0;
-            }
-            
-            span.form-required {
-                display: none;
-            }
-            
-            input.form-text {
-                width: $cols3;
-            }
-            
-            
-            ul li {            
-                text-transform: uppercase;
-                font-family: $sansseriffont;
-                color: $darktext; 
-            
-                &::before {
-                    content: "\\\\ ";
-                }
-            
-                a {
-                    color: $darktext;                
-                    text-decoration: none;
-                
-                    &:hover {
-                        text-decoration: underline;
-                        color: $hovertext;
-                    }
-                }
-            }                     
         }
     }
 }
@@ -235,15 +195,16 @@ footer {
 
 div#main {
     clear: left;
-    padding: 20px 0 20px 0;
-    margin: 0 $gutter;
+    padding: 10px 0 20px 0;
+    margin: 0;
     
     div#content-header {
         position: absolute;
         
         div.tabs {
             position: relative;
-            top: -1.5em;
+            top: 0.1em;
+            z-index: 1501;
         }
     }
     
@@ -257,13 +218,13 @@ div#main {
         }
         
         h1 {
-            font-size: 1.9em;
+            font-size: 1.5em;
             line-height: 1.2em;
             font-family: $seriffont;
             font-weight: normal;
             color: $darktext;
             margin: 0;
-            padding: 0 0 7px 7px;
+            padding: 0 0 10px 0;
         }
     }
     
@@ -518,6 +479,7 @@ input {
         background: #fff;
         border: 1px solid #fff;
         font-family: 'Helvetica', 'Arial', sans-serif;
+        width: 95%;        
     }
     &.form-submit {
         background: $darkbackground;
