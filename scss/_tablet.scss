@@ -1,8 +1,10 @@
 #page {
-    width: $cols10;
+    width: $cols9 + $gutter/$em;
 }
 
 header {
+    margin: 0;
+
     #logo {
         margin: 0 0 0 $gutter;
     }
@@ -102,8 +104,11 @@ header {
     }
 }
 
+footer {
+    margin: 0;
+}
+
 div#main {
-    margin: 0 $gutter;
     padding: 20px 0;
     
     div#page-title {

@@ -469,11 +469,17 @@ body.page-contact {
 }
 
 
-label {
+label, div.label {
     font-weight: normal;
     font-family: $seriffont;
     color: $darktext;
 }
+
+#crm-container .crm-section .label, .crm-section .label {
+    width: 8em;
+    margin-right: 0.7em;
+}
+
 input {
     &.form-text {
         background: #fff;
@@ -527,11 +533,11 @@ ul.tabs {
     }
 }
 
-@media screen and (min-width: 43.5em) {
+@media screen and (min-width: 40.5em) {
     @import "tablet";
 }
 
-@media screen and (min-width: 64.5em) {
+@media screen and (min-width: 61.5em) {
     @import "desktop";
 }
 
