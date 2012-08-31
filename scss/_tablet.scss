@@ -44,10 +44,6 @@ header {
             clear: none;
             padding: 0;
             
-            ul, li {
-                display: inline;
-            }
-            
             h2 {
                 display: inline;
             }
@@ -155,6 +151,56 @@ body.page-contact {
             width: $cols4;
             float: left;
             margin-right: $gutter;  
+        }
+    }
+}
+
+body.page-courses {    
+    div.views-row {
+        width: $cols4;
+        margin: 0 $gutter $gutter 0;
+        padding: 0 0 $gutter/2 0;
+        float: left;
+    }
+    div.views-row-odd {
+        clear: left;
+    }
+}
+
+body.page-civicrm-event {
+    div.event_address-section {
+        float: right;
+        width: $cols3 + $gutter/$em;
+        
+        div.label {
+            text-align: left!important;
+            float: none!important;
+        }
+    }
+    
+    div.event_map-section {
+        width: $cols5;
+        
+        br {
+            display: none;
+        }
+        
+        a {
+            color: $darktext!important;
+            
+            &:hover {
+                color: $hovertext!important;
+                text-decoration: underline!important;
+            }
+        }
+        
+        div#google_map {
+            width: $cols5!important;
+            border: 1px solid $darktext;
+            
+            br {
+                display: block;
+            }
         }
     }
 }

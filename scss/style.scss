@@ -33,7 +33,6 @@ a {
 
 #page {
     margin: 0 auto;
-    width: $cols5;
 }
 
 header {
@@ -118,6 +117,10 @@ header {
                 font-size: 0.9em;
                 margin: 0;
                 padding: 0 0 0 0.6em;
+            }
+            
+            ul, li {
+                display: inline;
             }
             
             li {
@@ -225,6 +228,11 @@ div#main {
             color: $darktext;
             margin: 0;
             padding: 0 0 10px 0;
+            
+            span {
+                color: $white;
+                text-transform: capitalize;
+            }
         }
     }
     
@@ -273,14 +281,17 @@ div#main {
             }
         
             div.field-name-field-sidebar-files div.field-item,
-            div.field-name-field-links div.field-item {
+            div.field-name-field-links div.field-item,
+            div.view-header li,
+            div.views-field-registration-link-text,
+            div.register_link-section {
                 text-transform: uppercase;
                 font-family: $sansseriffont;
                 color: $darktext;
                 margin-bottom: 0.2em;
                 
                 &::before {
-                    content: "\\\\ ";
+                    content: "// ";
                 }
                 
                 a {
@@ -306,7 +317,7 @@ div#main {
                     font-size: 1.2em;
                     line-height: 1.4em;
                     margin: 0 0 0.4em;
-                    color: #fff;
+                    color: $white;
                     font-family: $seriffont;                 
                     padding: 1em 0 0.3em $gutter/2;
                     background: $darkgreen;
@@ -435,7 +446,7 @@ body.node-type-homepage {
                     -webkit-border-radius: 9px;
                     -khtml-border-radius: 9px;
                     border-radius: 9px;
-                    background: #fff;
+                    background: $white;
                 }
             }
         }        
@@ -469,6 +480,71 @@ body.page-contact {
 }
 
 
+body.page-courses {
+    div.view-header {
+        h4 {
+            font-size: 1.1em;
+            color: $white!important;
+        }
+        li {
+            background: none!important;
+            padding-left: 0!important;
+        }
+    }
+    
+    div.views-row {
+        border-bottom: 1px dashed $darkgreen;
+    }
+    
+    div.views-field-title, div.views-field-nothing {
+        font-family: $seriffont;
+    }
+    
+    div.views-field-title {
+        font-size: 1.1em;
+        
+        a {
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    div.views-field-nothing {
+        font-size: 0.9em;
+    }
+}
+
+body.page-civicrm-event {
+
+    div.crm-actions-ribbon {
+        li {
+            background: none!important;
+            margin-left: 0!important;
+            padding-left: 0!important;
+        }
+    }
+    
+    div.register_link-section {
+        a {
+            background: none!important;
+            display: inline!important;
+            border: none!important;
+            float: none!important;
+        }
+        span {
+            display: inline!important;
+            text-shadow: none!important;
+            line-height: auto!important;
+            padding: 0!important;
+        }
+    }
+}
+
+
+
 label, div.label {
     font-weight: normal;
     font-family: $seriffont;
@@ -480,10 +556,14 @@ label, div.label {
     margin-right: 0.7em;
 }
 
+#printer-friendly {
+    display: none;
+}
+
 input {
     &.form-text {
-        background: #fff;
-        border: 1px solid #fff;
+        background: $white;
+        border: 1px solid $white;
         font-family: 'Helvetica', 'Arial', sans-serif;
         width: 95%;        
     }
@@ -492,7 +572,7 @@ input {
         text-transform: uppercase;
         border: 1px solid $darkgreen;
         font-family: $seriffont;
-        color: #fff;
+        color: $white;
         padding: 0.3em 0.7em 0.2em 0.7em;
                 
         &:hover {
@@ -501,8 +581,8 @@ input {
     }
 }
 textarea {
-    border: 1px solid #fff;
-    background: #fff;
+    border: 1px solid $white;
+    background: $white;
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 

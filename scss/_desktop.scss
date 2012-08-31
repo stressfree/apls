@@ -65,7 +65,7 @@ div#main {
             
             h1 {
                 font-size: 2.2em;
-                border-bottom: 2px dashed #fff;
+                border-bottom: 2px dashed $white;
                 padding: 0 0 7px 7px;
             }
         }
@@ -146,12 +146,57 @@ body.node-type-homepage {
         float: left;
         min-height: 395px;    
         
-        div.field {       
+        div.field {
             margin-left: $cols1;
         } 
     }
     
     div.group_images {
         margin-left: $cols5;
+    }
+}
+
+body.page-courses {
+    div.view-header {
+        position: absolute;
+        top: 200px;   
+        margin-left: -$cols5;
+    }
+}
+
+body.page-civicrm-event {    
+    div.register_link-top, div.event_date_time-section {
+        position: absolute;
+        margin-left: -$cols5!important;
+        float: none!important;
+        width: $cols4;
+    }
+    
+    div.register_link-top {
+        top: 290px;
+    }
+    
+    div.event_date_time-section {
+        top: 200px;
+        
+        label {
+            display: none!important;
+        }
+        
+        div.content {
+            color: $darktext;
+            font-family: $sansseriffont;
+            text-transform: uppercase;
+            line-height: 1.5em;
+            
+            abbr {
+                color: $white;
+                white-space: nowrap;
+                border-bottom: none!important;
+                font-family: $seriffont;
+                font-size: 1.1em;
+                text-transform: none;
+            }            
+        }
     }
 }
