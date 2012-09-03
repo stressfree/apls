@@ -12,6 +12,7 @@ $darktext: #05515b;
 $darkgreen: #98cccd;
 $lightgreen: #e5f4f3;
 $darkbackground: #004c56;
+$black: #000;
 $white: #fff;
 
 $seriffont: 'Merriweather', 'Georgia', 'Times', 'Times New Roman', serif;
@@ -236,6 +237,18 @@ div#main {
         }
     }
     
+    div.messages {
+        padding: 0.8em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        border: 1px solid #B0D730;
+        background: #F1F8EB;
+        
+        p {
+            margin: 0!important;
+        }
+    }
+    
     div#main-content {    
         div.content {
             margin: 0 $gutter;
@@ -284,7 +297,8 @@ div#main {
             div.field-name-field-links div.field-item,
             div.view-header li,
             div.views-field-registration-link-text,
-            div.register_link-section {
+            div.register_link-section,
+            span.crm-button {
                 text-transform: uppercase;
                 font-family: $sansseriffont;
                 color: $darktext;
@@ -310,6 +324,28 @@ div#main {
                 }
             }
             
+            span.crm-button {
+                font-size: 1em;
+                
+                input {
+                    color: $darktext;
+                    font-size: 1em;
+                    text-shadow: none;
+                    font-family: $sansseriffont;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                        color: $hovertext;
+                    }
+                }
+            }
+            
+            #crm-container .help, #crm-container #help {
+                font-size: 1em;
+                padding: 0.8em;
+                margin-bottom: 1.5em;
+            }
+                        
             div.group_sidebar {
                 margin: 1.5em 0 0 0;
             
@@ -430,9 +466,6 @@ body.node-type-homepage {
                 width: 16px;
                 height: 16px;
                 background: none #dadcdc!important;
-                -moz-border-radius: 9px;
-                -webkit-border-radius: 9px;
-                -khtml-border-radius: 9px;
                 border-radius: 9px;
                 list-style: none!important;
                 margin: 0 10px 0 0!important;
@@ -442,9 +475,6 @@ body.node-type-homepage {
                     display: block;
                     height: 16px;
                     width: 16px;
-                    -moz-border-radius: 9px;
-                    -webkit-border-radius: 9px;
-                    -khtml-border-radius: 9px;
                     border-radius: 9px;
                     background: $white;
                 }
@@ -519,28 +549,54 @@ body.page-courses {
 
 body.page-civicrm-event {
 
-    div.crm-actions-ribbon {
-        li {
-            background: none!important;
-            margin-left: 0!important;
-            padding-left: 0!important;
+    div.paid_event-section, div.pay_later-section {        
+        div.content {
+            label {
+                font-family: $bodyfont;
+                color: $black;
+                margin-left: 0.5em;
+            }            
         }
     }
     
-    div.register_link-section {
-        a {
-            background: none!important;
-            display: inline!important;
-            border: none!important;
-            float: none!important;
+    div.pay_later-section {    
+        div.label {
+            display: none;
         }
-        span {
-            display: inline!important;
-            text-shadow: none!important;
-            line-height: auto!important;
-            padding: 0!important;
+        div.content {
+            margin-left: 1em!important;
         }
     }
+}
+
+
+div.crm-actions-ribbon {
+    li {
+        background: none!important;
+        margin-left: 0!important;
+        padding-left: 0!important;
+    }
+}
+
+div.register_link-section, div.crm-submit-buttons {
+    a {
+        background: none!important;
+        display: inline!important;
+        border: none!important;
+        float: none!important;
+    }
+    span {
+        background: none!important;
+        border: none!important;
+        display: inline!important;
+        line-height: auto!important;
+        text-shadow: none!important;
+        padding: 0!important;
+    }
+}
+
+div.event_fees-section { 
+    margin-top: 1.5em;
 }
 
 
@@ -611,6 +667,12 @@ ul.tabs {
             }     
         }
     }
+}
+
+// Field required style
+.marker, .form-required, #crm-container .crm-marker {
+    font-weight: normal!important;
+    color: $hovertext!important;
 }
 
 @media screen and (min-width: 40.5em) {

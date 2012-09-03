@@ -178,15 +178,24 @@ body.page-civicrm-event {
         }
     }
     
+    
+    
+    div.event_fees-section {        
+        div.label {
+            width: 11.5em!important;
+        }
+    }
+    
     div.event_map-section {
         width: $cols5;
-        
+                
         br {
             display: none;
         }
         
         a {
             color: $darktext!important;
+            font-size: 0.8em;
             
             &:hover {
                 color: $hovertext!important;
@@ -197,10 +206,26 @@ body.page-civicrm-event {
         div#google_map {
             width: $cols5!important;
             border: 1px solid $darktext;
+                        
+            a {
+                font-size: 1em;
+            }
             
             br {
                 display: block;
             }
+        }
+    }
+    
+    div.paid_event-section, div.email-section {
+        div.label {
+            width: 11.5em!important;
+        }
+    }
+    
+    div.paid_event-section {        
+        div.content {
+            margin-left: 12.5em!important;
         }
     }
 }
