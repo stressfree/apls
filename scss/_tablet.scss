@@ -145,6 +145,28 @@ body.node-type-homepage {
     }
 }
 
+body.node-type-standard {
+    div.field-type-image {
+        div.field-item {
+            border: 6px solid #fff;
+            clear: right;
+            float: right;
+            font-size: 10px;
+            line-height: 10px;
+            margin: 0 0 2em 2em;
+            
+            a {
+                font-size: 1em;
+                line-height: 1em;
+            }
+            
+            img {
+                border: 1px solid $darktext;
+            }
+        } 
+    }
+}
+
 body.page-contact {    
     div#main-content {            
         div.contactPerson, div.contactPhone {
@@ -155,7 +177,7 @@ body.page-contact {
     }
 }
 
-body.page-courses {    
+body.page-courses {
     div.views-row {
         width: $cols4;
         margin: 0 $gutter $gutter 0;
@@ -180,6 +202,8 @@ body.page-civicrm-event {
     
     
     div.event_map-section {
+        background: #fff;
+        border: 6px solid #fff;
         width: $cols5;
                 
         br {
