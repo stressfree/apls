@@ -353,6 +353,7 @@ div#main {
             
             p.nextStep {
                 margin: 2em 0 1em 0;
+                display: none;
             }
             
             #crm-container .help, #crm-container #help {
@@ -652,6 +653,13 @@ label, div.label {
 #crm-container .crm-section .label, .crm-section .label {
     width: 8em;
     margin-right: 0.7em;
+}
+
+.ac_results-inner, .crm-participant-list-inner, .crm-event-links-list-inner, 
+.crm-contribpage-links-list-inner, .crm-create-new-list-inner, 
+.crm-contact-actions-list-inner {
+    background: #fff;
+    border: 1px solid $darktext;
 }
 
 #printer-friendly {
