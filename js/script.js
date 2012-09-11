@@ -39,4 +39,20 @@ Drupal.behaviors.aplsHomepage = {
       }
 };
 
+
+Drupal.behaviors.aplsEventRegistration = {
+    attach: function (context, settings) {        
+        var input = $('div.crm-event-register-form-block input#participant_note');
+        
+        if (input != undefined) {
+            textarea = $('<textarea></textarea>').attr({
+                id: 'participant_note',
+                name: 'participant_note',
+                value: $('div.crm-event-register-form-block input#participant_note').val()
+            });
+            input.after(textarea).remove();
+        }
+    }
+};
+
 }(jQuery));
