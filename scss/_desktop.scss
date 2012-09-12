@@ -2,7 +2,7 @@
     width: $cols14;
 }
 
-header {    
+header {
     #logo {
         margin-left: $cols1;
         width: $cols3 + $gutter/$em;
@@ -169,19 +169,35 @@ body.page-courses {
 }
 
 body.page-civicrm-event {    
-    div.register_link-top, div.event_date_time-section {
+    div.event_type-section, div.register_link-top, 
+    div.event_date_time-section {
         position: absolute;
         margin-left: -$cols5!important;
         float: none!important;
         width: $cols4;
     }
     
+    div.event_type-section {
+        top: 200px;
+                
+        label {
+            display: none!important;
+        }
+        
+        div.content {
+            color: $darktext;
+            font-family: $seriffont;
+            font-size: 1.4em!important;
+            line-height: 1.5em;
+        }
+    }
+    
     div.register_link-top {
-        top: 290px;
+        top: 340px;
     }
     
     div.event_date_time-section {
-        top: 200px;
+        top: 240px;
         
         label {
             display: none!important;
@@ -193,6 +209,10 @@ body.page-civicrm-event {
             text-transform: uppercase;
             line-height: 1.5em;
             
+            span, abbr {
+                display: block;
+            }
+            
             abbr {
                 color: $white;
                 white-space: nowrap;
@@ -203,4 +223,10 @@ body.page-civicrm-event {
             }            
         }
     }
+}
+
+div.crm-actions-ribbon {
+    display: block;
+    margin-top: -30px!important;
+    position: absolute;
 }

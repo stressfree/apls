@@ -247,14 +247,26 @@ div#main {
     }
     
     div.messages {
-        padding: 0.8em;
-        margin-bottom: 2em;
-        border-radius: 4px;
-        border: 1px solid #B0D730;
-        background: #F1F8EB;
+        border: 0 none;
+        border-radius: 0;
+        background: #004c56;
+        color: #fff;
+        font-family: $seriffont;
+        font-size: 0.9em;
+        line-height: 1.6em;
+        margin-bottom: 1em;
+        padding: 1em;
         
         p {
             margin: 0!important;
+        }
+        
+        a {
+            color: $lightgreen!important;
+        }
+        
+        div.inform-icon {
+            display: none;
         }
     }
     
@@ -325,7 +337,7 @@ div#main {
             div.view-header li,
             div.views-field-registration-link-text,
             div.register_link-section,
-            p.nextStep {
+            p.nextStep, div.iCal_links-section {
                 text-transform: uppercase;
                 font-family: $sansseriffont;
                 color: $darktext;
@@ -339,6 +351,7 @@ div#main {
                     color: $darktext;                
                     text-decoration: none;
                     font-size: 0.95em;
+                    padding: 0!important;
                     
                     &:hover {
                         text-decoration: underline;
@@ -544,6 +557,15 @@ body.page-courses {
         }
     }
     
+    h3 {
+        clear: left;
+        background: #fff;
+        left: -10px;
+        margin: 0 -20px 0.8em 0!important;
+        padding: 0.5em 10px 0.4em 10px!important;
+        position: relative;
+    }
+    
     div.views-row {
         border-bottom: 1px dashed $darkgreen;
     }
@@ -613,6 +635,8 @@ body.page-civicrm-event {
 
 
 div.crm-actions-ribbon {
+    display: none;
+
     li {
         background: none!important;
         margin-left: 0!important;
@@ -639,9 +663,15 @@ div.register_link-section, div.crm-submit-buttons {
 
 div.event_fees-section { 
     margin-top: 1.5em;
-
+    
     div.label {
-        display: none;
+        float: none!important;
+        text-align: left!important;
+        width: auto!important;
+    }
+    
+    td.price_set_field-label {
+        padding-left: 0!important;
     }
     
     td.price_set_option_group-label {
