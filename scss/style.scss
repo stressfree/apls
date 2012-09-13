@@ -246,7 +246,7 @@ div#main {
         }
     }
     
-    div.messages {
+    div.messages, #crm-container #help, #crm-container .help {
         border: 0 none;
         border-radius: 0;
         background: #004c56;
@@ -267,6 +267,10 @@ div#main {
         
         div.inform-icon {
             display: none;
+        }
+        
+        div.bold {
+            color: $white!important;
         }
     }
     
@@ -337,7 +341,8 @@ div#main {
             div.view-header li,
             div.views-field-registration-link-text,
             div.register_link-section,
-            p.nextStep, div.iCal_links-section {
+            p.nextStep, div.iCal_links-section,
+            span.user-page-link, div.event_info_link-section {
                 text-transform: uppercase;
                 font-family: $sansseriffont;
                 color: $darktext;
@@ -369,10 +374,8 @@ div#main {
                 display: none;
             }
             
-            #crm-container .help, #crm-container #help {
-                font-size: 1em;
-                padding: 0.8em;
-                margin-bottom: 1.5em;
+            span.user-page-bullet {
+                display: none;
             }
                         
             div.group_sidebar {
@@ -768,6 +771,7 @@ ul.tabs {
 
 // Field required style
 .marker, .form-required, #crm-container .crm-marker {
+    font-family: $seriffont;
     font-weight: normal!important;
     color: $hovertext!important;
 }
