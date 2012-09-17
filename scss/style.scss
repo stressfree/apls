@@ -521,6 +521,12 @@ body.node-type-homepage {
     }
 }
 
+body.node-type-standard {
+    div.field-type-image {
+        display: none;
+    }
+}
+
 body.page-contact {
     
     div#main-content {
@@ -552,12 +558,18 @@ body.page-courses {
     div.view-header {
         h4 {
             font-size: 1.1em;
-            color: $white!important;
+            color: $darktext!important;
+            padding-top: 0!important;
         }
         li {
             background: none!important;
             padding-left: 0!important;
         }
+    }
+    
+    div.view-content {
+        clear: left;
+        padding-top: 1em;
     }
     
     h3 {
@@ -571,6 +583,7 @@ body.page-courses {
     
     div.views-row {
         border-bottom: 1px dashed $darkgreen;
+        margin: 0 0 $gutter 0;
     }
     
     div.views-field-title, div.views-field-nothing {
@@ -593,6 +606,7 @@ body.page-courses {
         font-size: 0.9em;
     }
 }
+
 
 body.page-civicrm-event {
 

@@ -163,8 +163,21 @@ body.node-type-homepage {
 body.page-courses {
     div.view-header {
         position: absolute;
-        top: 200px;   
+        top: 210px;   
         margin-left: -$cols5;
+        
+        h4 {            
+            color: $white!important;
+        }
+          
+        li {
+            float: none;
+            width: auto;
+        }
+    }
+    
+    div.view-content {
+        padding-top: 0;
     }
 }
 

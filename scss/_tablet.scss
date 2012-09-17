@@ -141,12 +141,14 @@ body.node-type-homepage {
     
     div.group_images {
         width: $cols9 + $gutter/$em;
-        height: 455px;  
+        height: 455px; 
     }
 }
 
 body.node-type-standard {
     div.field-type-image {
+        display: block;
+        
         div.field-item {
             border: 6px solid #fff;
             clear: right;
@@ -184,8 +186,16 @@ body.page-courses {
         padding: 0 0 $gutter/2 0;
         float: left;
     }
+    
     div.views-row-odd {
         clear: left;
+    }
+    
+    div.view-header {        
+        li {
+            float: left;
+            width: $cols3;
+        }
     }
 }
 
