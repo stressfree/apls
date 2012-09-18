@@ -192,47 +192,26 @@ body.page-civicrm-event {
     
     div.event_type-section {
         top: 200px;
-                
-        label {
-            display: none!important;
-        }
-        
-        div.content {
-            color: $darktext;
-            font-family: $seriffont;
-            font-size: 1.4em!important;
-            line-height: 1.5em;
-        }
     }
     
     div.register_link-top {
         top: 340px;
+        margin-top: 0!important;
     }
     
     div.event_date_time-section {
         top: 240px;
         
-        label {
-            display: none!important;
-        }
-        
         div.content {
-            color: $darktext;
-            font-family: $sansseriffont;
-            text-transform: uppercase;
-            line-height: 1.5em;
             
             span, abbr {
                 display: block;
+                padding: 0;
             }
             
             abbr {
                 color: $white;
-                white-space: nowrap;
-                border-bottom: none!important;
-                font-family: $seriffont;
                 font-size: 1.1em;
-                text-transform: none;
             }            
         }
     }

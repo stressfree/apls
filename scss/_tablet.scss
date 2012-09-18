@@ -200,6 +200,7 @@ body.page-courses {
 }
 
 body.page-civicrm-event {
+
     div.event_address-section {
         float: right;
         width: $cols3 + $gutter/$em;
@@ -210,38 +211,22 @@ body.page-civicrm-event {
         }
     }
     
+    div.event_date_time-section {
+        width: 75%!important;
+    }
     
     div.event_map-section {
-        background: #fff;
-        border: 6px solid #fff;
         width: $cols5;
                 
-        br {
-            display: none;
-        }
-        
-        a {
-            color: $darktext!important;
-            font-size: 0.8em;
-            
-            &:hover {
-                color: $hovertext!important;
-                text-decoration: underline!important;
-            }
-        }
-        
         div#google_map {
             width: $cols5!important;
-            border: 1px solid $darktext;
-                        
-            a {
-                font-size: 1em;
-            }
-            
-            br {
-                display: block;
-            }
         }
+    }
+    
+    div.register_link-top {
+       clear: none!important;
+       float: right!important;
+       margin-top: -0.7em!important;
     }
     
     div.price_set-section, div.email-section {

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="ie"><![endif]-->
-<!--[if gte IE 9]><!--><html><!--<![endif]-->
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
 <head>
   <?php print $head; ?>
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php print $GLOBALS['base_path'] . drupal_get_path( 'theme', variable_get('theme_default', '0') ) .'/favicon/apple-touch-icon-114x114-precomposed.png' ?>">

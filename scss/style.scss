@@ -620,6 +620,56 @@ body.page-civicrm-event {
         }
     }
     
+    div.event_type-section {
+        float: left;
+        margin: 0!important;
+            
+        div.label {
+            display: none;
+        }
+        
+        div.content {
+            color: $darktext;
+            font-family: $seriffont;
+            font-size: 1.4em!important;
+            line-height: 1.5em;
+        }
+    }
+    
+    div.event_date_time-section {    
+        clear: left;
+        float: left;
+        width: 100%!important;
+                
+        label {
+            display: none!important;
+        }
+        
+        div.content {
+            color: $darktext;
+            font-family: $sansseriffont;
+            text-transform: uppercase;
+            line-height: 1.5em;
+            
+            abbr {
+                white-space: nowrap;
+                border-bottom: none!important;
+                font-family: $seriffont;
+                text-transform: none;
+            }
+            
+            span {                
+                padding: 0 0.5em;
+            }         
+        }
+    }
+    
+    div.event_description-section {
+        p {
+            clear: left;
+        }
+    }
+    
     div.crm-event-register-form-block {
         div.label {
             width: 10.5em!important;
@@ -638,6 +688,54 @@ body.page-civicrm-event {
                 height: 5em;
             }
         }
+    }
+    
+    div.event_address-section {
+        clear: left;
+        float: none;
+        
+        div.label {
+            text-align: left!important;
+            float: none!important;
+        }
+    }
+    
+    div.event_map-section {
+        background: #fff;
+        border: 6px solid #fff;
+                
+        br {
+            display: none;
+        }
+        
+        a {
+            color: $darktext!important;
+            font-size: 0.8em;
+            
+            &:hover {
+                color: $hovertext!important;
+                text-decoration: underline!important;
+            }
+        }
+          
+        div#google_map {
+            border: 1px solid $darktext;
+            width: 100%!important;
+
+            a {
+                font-size: 1em;
+            }
+            
+            br {
+                display: block;
+            }
+        }  
+    }
+    
+    div.register_link-top {
+       clear: left;
+       float: none!important;
+       margin-bottom: 1em!important; 
     }
     
     div.pay_later-section {    
@@ -799,6 +897,7 @@ ul.tabs {
 }
 
 html.ie {
+    @import "tablet";
     @import "desktop";
     @import "ie";
 }
