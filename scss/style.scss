@@ -899,6 +899,10 @@ ul.tabs {
 html.ie {
     @import "tablet";
     @import "desktop";
+}
+
+html.ie7, html.ie6 {
     @import "ie";
 }
+
 @import "zoom";

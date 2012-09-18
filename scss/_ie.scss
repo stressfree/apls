@@ -1,8 +1,5 @@
-.ie7 {
-    header {
-        #logo {
-            border: 1px solid black;
-            margin-left: -$cols3;
-        }
+header {
+    #logo {
+        margin-left: -$cols3;
     }
 }
