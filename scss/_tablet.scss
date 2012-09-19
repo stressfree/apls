@@ -43,6 +43,7 @@ header {
             width: $cols7 - $gutter/$em;
             clear: none;
             padding: 0;
+            z-index: 1000;
             
             h2 {
                 display: inline;
@@ -73,7 +74,7 @@ header {
             }
             
             input.form-text {
-                width: $cols3;
+                width: $cols3!important;
             }
             
             
@@ -244,6 +245,6 @@ body.page-civicrm-event {
 
 input {
     &.form-text {
-        width: inherit;
+        width: auto!important;
     }
 }

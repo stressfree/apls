@@ -2,11 +2,6 @@
 
 Drupal.behaviors.aplsHomepage = {
   attach: function (context, settings) {
-        $('#block-user-login div.content').toggle();
-        $('#block-user-login h2').click(function(e) {
-            $('#block-user-login h2').toggleClass('selected');
-            $('#block-user-login div.content').toggle();
-        });
         
         function nextSlide(){
             nextIndex = currentIndex + 1;
@@ -39,13 +34,22 @@ Drupal.behaviors.aplsHomepage = {
       }
 };
 
+Drupal.behaviors.aplsLogin = {
+  attach: function (context, settings) {
+        $('#block-user-login div.content').toggle();
+        $('#block-user-login h2').click(function(e) {
+            $('#block-user-login h2').toggleClass('selected');
+            $('#block-user-login div.content').toggle();
+        });
+    }
+};
 
 Drupal.behaviors.aplsEventRegistration = {
-    attach: function (context, settings) {        
+    attach: function (context, settings) {
         var input = $('div.crm-event-register-form-block input#participant_note');
         
-        if (input != undefined) {
-            textarea = $('<textarea></textarea>').attr({
+        if (input !== undefined) {
+            var textarea = $('<textarea></textarea>').attr({
                 id: 'participant_note',
                 name: 'participant_note',
                 value: $('div.crm-event-register-form-block input#participant_note').val()
