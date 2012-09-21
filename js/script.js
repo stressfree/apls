@@ -36,7 +36,12 @@ Drupal.behaviors.aplsHomepage = {
 
 Drupal.behaviors.aplsLogin = {
   attach: function (context, settings) {
-        $('#block-user-login div.content').toggle();
+  
+        var fieldsInError = $('#block-user-login div.content input.error');
+        if (fieldsInError.length === 0) {
+            $('#block-user-login div.content').toggle();
+        }
+  
         $('#block-user-login h2').click(function(e) {
             $('#block-user-login h2').toggleClass('selected');
             $('#block-user-login div.content').toggle();

@@ -627,6 +627,14 @@ body.page-courses {
 
 body.page-civicrm-event {
 
+    input.error {
+        border: 3px solid #ff3333!important;
+    }
+    
+    span.crm-error {
+        display: block;
+    }
+
     div.price_set-section {
         div.content {
             label {
@@ -765,6 +773,50 @@ body.page-civicrm-event {
     }
 }
 
+body.node-type-webform {
+    div.form-item {
+        clear: left;
+        
+        label {
+            float: left;
+            font-size: 0.9em!important;
+            margin-right: 0.7em;
+            text-align: right;
+            width: 10.5em!important;
+        }
+        
+        input {
+            border: 1px solid #999;
+            vertical-align: middle;
+            padding-left: 1px;
+            
+            &.error {
+                border: 3px solid #ff3333;
+            }
+        }
+        
+        p {
+            font-size: 0.9em;
+            color: #696969;
+            margin: 2em 0 0.7em 40px!important;
+        }
+        
+        div.form-textarea-wrapper {
+            float: left;
+            
+            textarea {
+                border: 1px solid #999;
+                width: 400px;
+            }
+        }
+    }
+    
+    div.form-actions {
+        clear: left;
+        padding-top: 1em;
+    }
+}
+
 
 div.crm-actions-ribbon {
     display: none;
@@ -816,7 +868,6 @@ div.event_fees-section {
         padding-left: 0!important;
     }
 }
-
 
 
 label, div.label {
