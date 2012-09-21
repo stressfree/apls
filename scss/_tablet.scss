@@ -1,5 +1,5 @@
 #page {
-    width: $cols9 + $gutter/$em;
+    width: $cols9 + $gutter;
 }
 
 header {
@@ -15,13 +15,13 @@ header {
        
     nav {
         float: right;
-        width: $cols7 - $gutter/$em;
+        width: $cols7 - $gutter;
                         
         div.content, ul, li {
             display: inline;
         }
         
-        #block-system-main-menu {
+        #block-system-main-menu, #block-menu-menu-main-menu-authenticated-  {
             float: none; 
             padding: 15px 0 5px 0;
             border-bottom: 3px solid $darkgreen;
@@ -40,7 +40,7 @@ header {
             text-align: right;
             position: absolute;
             top: 10px;
-            width: $cols7 - $gutter/$em;
+            width: $cols7 - $gutter;
             clear: none;
             padding: 0;
             z-index: 1000;
@@ -109,7 +109,7 @@ div#main {
     padding: 20px 0;
     
     div#page-title {
-        width: $cols9 + $gutter/$em;
+        width: $cols9 + $gutter;
         
         h1 {
             font-size: 1.9em;
@@ -124,12 +124,12 @@ div#main {
     
     div#main-content {        
         div.region-content {
-            width: $cols9 + $gutter/$em;
+            width: $cols9 + $gutter;
         }
     }
 
     div#sidebar-frame {
-        width: $cols9 + $gutter/$em;
+        width: $cols9 + $gutter;
         height: $gutter;
         background: url('../images/horizontalbar-bg.png') top left no-repeat;
     }
@@ -137,11 +137,11 @@ div#main {
 
 body.node-type-homepage {        
     div.group_content {
-        width: $cols9 + $gutter/$em;
+        width: $cols9 + $gutter;
     }
     
     div.group_images {
-        width: $cols9 + $gutter/$em;
+        width: $cols9 + $gutter;
         height: 455px; 
     }
 }
@@ -204,7 +204,7 @@ body.page-civicrm-event {
 
     div.event_address-section {
         float: right;
-        width: $cols3 + $gutter/$em;
+        width: $cols3 + $gutter;
         
         div.label {
             text-align: left!important;

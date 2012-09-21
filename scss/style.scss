@@ -69,7 +69,7 @@ header {
     #logo {
         position: absolute;
         height: 90px;
-        width: $cols2 + $gutter/$em;
+        width: $cols2 + $gutter;
         margin: 0;
         
         img {
@@ -78,7 +78,7 @@ header {
     }
     
     hgroup {
-        width: $cols2 + $gutter/$em;
+        width: $cols2 + $gutter;
         height: 90px;
         float: left;
         margin: 0;
@@ -120,7 +120,7 @@ header {
             }
         }
         
-        #block-system-main-menu {
+        #block-system-main-menu, #block-menu-menu-main-menu-authenticated- {
             padding: 0;
             float: right;
                 
@@ -282,6 +282,13 @@ div#main {
             color: $lightgreen!important;
         }
         
+        li {
+            background: none!important;
+            list-style: circle!important;
+            margin-left: 3em!important;
+            padding-left: 0.3em!important;
+        }
+        
         div.inform-icon {
             display: none;
         }
@@ -359,7 +366,8 @@ div#main {
             div.views-field-registration-link-text,
             div.register_link-section,
             p.nextStep, div.iCal_links-section,
-            span.user-page-link, div.event_info_link-section {
+            span.user-page-link, div.event_info_link-section,
+            div.links {
                 text-transform: uppercase;
                 font-family: $sansseriffont;
                 color: $darktext;
@@ -465,7 +473,7 @@ body.node-type-homepage {
     }
         
     div.group-dividertab {
-        width: $cols9 + $gutter/$em;
+        width: $cols9 + $gutter;
         position: absolute;
         height: $gutter;
         margin: 0;
@@ -514,7 +522,7 @@ body.node-type-homepage {
             position: absolute;
             margin-top: 400px;
             text-align: right;
-            width: $cols9 - $gutter/$em;
+            width: $cols9 - $gutter;
             
             li {
                 float: right;
@@ -627,12 +635,25 @@ body.page-courses {
 
 body.page-civicrm-event {
 
-    input.error {
-        border: 3px solid #ff3333!important;
+    input, textarea, select {
+        border: 0 none!important;
+        
+        &.error {
+            border: 2px solid $hovertext!important;
+        }
     }
     
     span.crm-error {
+        background: none!important;
+        color: $hovertext!important;
         display: block;
+        margin: 0.1em 0 0 10em;
+    }
+    
+    span.crm-error-label {
+        color: $darktext!important;
+        padding: 0!important;
+        margin: 0!important;
     }
 
     div.price_set-section {
@@ -786,12 +807,11 @@ body.node-type-webform {
         }
         
         input {
-            border: 1px solid #999;
             vertical-align: middle;
             padding-left: 1px;
             
             &.error {
-                border: 3px solid #ff3333;
+                border: 2px solid $hovertext;
             }
         }
         
@@ -805,7 +825,6 @@ body.node-type-webform {
             float: left;
             
             textarea {
-                border: 1px solid #999;
                 width: 400px;
             }
         }

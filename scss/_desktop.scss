@@ -5,13 +5,13 @@
 header {
     #logo {
         margin-left: $cols1;
-        width: $cols3 + $gutter/$em;
+        width: $cols3 + $gutter;
         height: 133px;
     }
     
     hgroup {
         margin-left: $cols1;
-        width: $cols3 + $gutter/$em;
+        width: $cols3 + $gutter;
         height: 133px;
         
         h2 {
@@ -20,11 +20,11 @@ header {
     }
     
     nav {
-        width: $cols9 + $gutter/$em;
+        width: $cols9 + $gutter;
         
-        #block-system-main-menu {                
+        #block-system-main-menu, #block-menu-menu-main-menu-authenticated- {                
             padding: 68px 0 5px 0;
-            width: $cols9 + $gutter/$em;
+            width: $cols9 + $gutter;
             
             h2, li {
                 font-size: 1.05em;
@@ -37,7 +37,7 @@ header {
         }
     
         #block-system-user-menu, #block-user-login {
-            width: $cols9 + $gutter/$em;
+            width: $cols9 + $gutter;
         }
         
         #block-user-login {
@@ -50,7 +50,7 @@ header {
 }
 
 footer {
-    margin-left: $cols5 + $gutter/$em + 1.1;
+    margin-left: $cols5 + $gutter + 1.1;
 }
 
 div#main {    
