@@ -55,6 +55,13 @@ a {
             text-decoration: underline;
         }
     }
+    
+    div.header-dark {
+        border-radius: 0px!important;
+        -moz-border-radius: 0px!important;
+        -webkit-border-radius: 0px!important;
+        -khtml-border-radius: 0px!important;
+    }
 }
 
 #page {
@@ -572,9 +579,29 @@ body.page-contact {
                 text-decoration: none;
             }
         }
+        
+        div.form-item {
+            label {
+                font-size: 0.9em;
+            }
+            
+            input {
+                width: 95%;
+            }
                 
-        textarea {
-            height: 15em;
+            div.resizable-textarea {
+                width: 95%;
+            }
+            
+            textarea {
+                width: 100%;
+                height: 13em;
+            }
+        }
+        
+        div.form-actions {
+            clear: left;
+            padding: 1em 0 0 0;
         }
     }
 }
@@ -774,7 +801,8 @@ body.page-civicrm-event {
             }
         }
         
-        div.crm-event-register-form-block {
+        div.crm-event-register-form-block,
+        div.crm-event-confirm-form-block fieldset {
             div.label {
                 font-size: 0.9em!important;
                 float: none!important;
@@ -883,7 +911,7 @@ body.node-type-webform {
         
         div.form-actions {
             clear: left;
-            padding-top: 1em;
+            padding: 1em 0 0 0;
         }
     }
 }
