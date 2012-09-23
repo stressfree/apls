@@ -162,58 +162,62 @@ body.node-type-homepage {
 }
 
 body.page-courses {
-    div.view-header {
-        position: absolute;
-        top: 210px;   
-        margin-left: -$cols5;
+    div#main-content {
+        div.view-header {
+            position: absolute;
+            top: 210px;   
+            margin-left: -$cols5;
+            
+            h4 {            
+                color: $white!important;
+            }
+              
+            li {
+                float: none;
+                width: auto;
+            }
+        }
         
-        h4 {            
-            color: $white!important;
+        div.view-content {
+            padding-top: 0;
         }
-          
-        li {
-            float: none;
-            width: auto;
-        }
-    }
-    
-    div.view-content {
-        padding-top: 0;
     }
 }
 
-body.page-civicrm-event {    
-    div.event_type-section, div.register_link-top, 
-    div.event_date_time-section {
-        position: absolute;
-        margin-left: -$cols5!important;
-        float: none!important;
-        width: $cols4;
-    }
-    
-    div.event_type-section {
-        top: 200px;
-    }
-    
-    div.register_link-top {
-        top: 340px;
-        margin-top: 0!important;
-    }
-    
-    div.event_date_time-section {
-        top: 240px;
+body.page-civicrm-event { 
+    div#main-content {   
+        div.event_type-section, div.register_link-top, 
+        div.event_date_time-section {
+            position: absolute;
+            margin-left: -$cols5!important;
+            float: none!important;
+            width: $cols4;
+        }
         
-        div.content {
+        div.event_type-section {
+            top: 200px;
+        }
+        
+        div.register_link-top {
+            top: 340px;
+            margin-top: 0!important;
+        }
+        
+        div.event_date_time-section {
+            top: 240px;
             
-            span, abbr {
-                display: block;
-                padding: 0;
+            div.content {
+                
+                span, abbr {
+                    display: block;
+                    padding: 0;
+                }
+                
+                abbr {
+                    color: $white;
+                    font-size: 1.1em;
+                }            
             }
-            
-            abbr {
-                color: $white;
-                font-size: 1.1em;
-            }            
         }
     }
 }

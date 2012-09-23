@@ -40,11 +40,16 @@ Drupal.behaviors.aplsLogin = {
         var fieldsInError = $('#block-user-login div.content input.error');
         if (fieldsInError.length === 0) {
             $('#block-user-login div.content').toggle();
+            $('#block-user-login input:first').focus();
         }
   
         $('#block-user-login h2').click(function(e) {
             $('#block-user-login h2').toggleClass('selected');
             $('#block-user-login div.content').toggle();
+            
+            if ($('#block-user-login div.content').is(":visible")) {
+                $('#block-user-login input:first').focus();
+            }
         });
     }
 };

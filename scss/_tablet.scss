@@ -26,6 +26,9 @@ header {
             padding: 15px 0 5px 0;
             border-bottom: 3px solid $darkgreen;
             
+            h2, li {
+                padding: 0 0 0 1.1em;
+            }
         
             h2 {
                 display: block;
@@ -43,7 +46,7 @@ header {
             width: $cols7 - $gutter;
             clear: none;
             padding: 0;
-            z-index: 1000;
+            z-index: 2000;
             
             h2 {
                 display: inline;
@@ -135,7 +138,7 @@ div#main {
     }
 }
 
-body.node-type-homepage {        
+body.node-type-homepage {   
     div.group_content {
         width: $cols9 + $gutter;
     }
@@ -147,26 +150,28 @@ body.node-type-homepage {
 }
 
 body.node-type-standard {
-    div.field-type-image {
-        display: block;
-        
-        div.field-item {
-            border: 6px solid #fff;
-            clear: right;
-            float: right;
-            font-size: 10px;
-            line-height: 10px;
-            margin: 0 0 2em 2em;
+    div#main-content {
+        div.field-type-image {
+            display: block;
             
-            a {
-                font-size: 1em;
-                line-height: 1em;
-            }
-            
-            img {
-                border: 1px solid $darktext;
-            }
-        } 
+            div.field-item {
+                border: 6px solid #fff;
+                clear: right;
+                float: right;
+                font-size: 10px;
+                line-height: 10px;
+                margin: 0 0 2em 2em;
+                
+                a {
+                    font-size: 1em;
+                    line-height: 1em;
+                }
+                
+                img {
+                    border: 1px solid $darktext;
+                }
+            } 
+        }
     }
 }
 
@@ -181,64 +186,121 @@ body.page-contact {
 }
 
 body.page-courses {
-    div.views-row {
-        width: $cols4;
-        margin: 0 $gutter $gutter 0;
-        padding: 0 0 $gutter/2 0;
-        float: left;
-    }
-    
-    div.views-row-odd {
-        clear: left;
-    }
-    
-    div.view-header {        
-        li {
+    div#main-content {
+        div.views-row {
+            width: $cols4;
+            margin: 0 $gutter $gutter 0;
+            padding: 0 0 $gutter/2 0;
             float: left;
-            width: $cols3;
+        }
+        
+        div.views-row-odd {
+            clear: left;
+        }
+        
+        div.view-header {        
+            li {
+                float: left;
+                width: $cols3;
+            }
         }
     }
 }
 
 body.page-civicrm-event {
-
-    div.event_address-section {
-        float: right;
-        width: $cols3 + $gutter;
+    div#main-content {
         
-        div.label {
-            text-align: left!important;
-            float: none!important;
+        input.form-text, textarea {
+            width: auto!important;
         }
-    }
-    
-    div.event_date_time-section {
-        width: 75%!important;
-    }
-    
-    div.event_map-section {
-        width: $cols5;
+        
+        div.event_address-section {
+            float: right;
+            width: $cols3 + $gutter;
+            
+            div.label {
+                text-align: left!important;
+                float: none!important;
+            }
+        }
+        
+        div.event_date_time-section {
+            width: 75%!important;
+        }
+        
+        div.event_map-section {
+            width: $cols5;
+                    
+            div#google_map {
+                width: $cols5!important;
+            }
+        }
+        
+        div.register_link-top {
+           clear: none!important;
+           float: right!important;
+           margin-top: -0.7em!important;
+        }
+        
+        div.price_set-section, div.email-section {
+            div.label {
+                width: 10.5em!important;
+            }
+        }
+        
+        div.price_set-section {        
+            div.content {
+                margin-left: 11.5em!important;
+            }
+        }
+        
+        div.crm-event-register-form-block {
+            div.label {
+                float: left!important;
+                font-size: 0.9em!important;
+                text-align: right!important;
+                width: 10.5em!important;                
+            }            
+            
+            p {
+                margin: 2em 0 0.7em 40px!important;
+            }
                 
-        div#google_map {
-            width: $cols5!important;
+            div.participant_note-section {
+                
+                span {
+                    margin: 0 0 0.7em 40px;
+                }
+                
+                textarea#participant_note {
+                    width: 400px;
+                }
+            }
         }
     }
-    
-    div.register_link-top {
-       clear: none!important;
-       float: right!important;
-       margin-top: -0.7em!important;
-    }
-    
-    div.price_set-section, div.email-section {
-        div.label {
-            width: 10.5em!important;
-        }
-    }
-    
-    div.price_set-section {        
-        div.content {
-            margin-left: 11.5em!important;
+}
+
+body.node-type-webform {
+    div#main-content {
+        div.form-item {            
+            label {
+                float: left;
+                margin-right: 0.7em;
+                text-align: right;
+                width: 10.5em!important;
+            }
+            
+            p {
+                margin: 2em 0 0.7em 40px!important;
+            }
+            
+            div.form-textarea-wrapper {
+                float: left;
+                
+                textarea {
+                    width: 400px;
+                }
+            }
         }
     }
 }
