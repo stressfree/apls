@@ -84,11 +84,13 @@
 {/if}
 <div class="vevent crm-block crm-event-info-form-block">
 
-    {if $event.event_type_id == 7 || $event.event_type_id == 8}
+    {if $event.event_type_id >= 7 || $event.event_type_id <= 9}
     <div class="crm-section event_type-section">
 	    <div class="label"><label>{ts}Position{/ts}</label></div>
 	    <div class="content">
-            {if $event.event_type_id == 7}Full Candidate{else}Nurse Observer{/if}
+            {if $event.event_type_id == 7}Full Candidate{/if}
+            {if $event.event_type_id == 8}Nurse Observer{/if}
+            {if $event.event_type_id == 9}Instructor{/if}
         </div>
 		<div class="clear"></div>
 	</div>

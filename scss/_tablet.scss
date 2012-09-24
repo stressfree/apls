@@ -249,7 +249,7 @@ body.page-civicrm-event {
         }
         
         div.event_date_time-section {
-            width: 75%!important;
+            width: 74%!important;
         }
         
         div.event_map-section {
@@ -264,6 +264,7 @@ body.page-civicrm-event {
            clear: none!important;
            float: right!important;
            margin-top: -0.7em!important;
+           margin-left: 0!important;
         }
         
         div.price_set-section, div.email-section {
@@ -276,6 +277,12 @@ body.page-civicrm-event {
             div.content {
                 margin-left: 11.5em!important;
             }
+        }
+        
+        div.event-info {
+            div.messages {
+                clear: both;
+            }            
         }
         
         div.crm-event-register-form-block,
