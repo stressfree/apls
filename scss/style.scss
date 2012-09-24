@@ -588,14 +588,10 @@ body.page-contact {
             input {
                 width: 95%;
             }
-                
-            div.resizable-textarea {
-                width: 95%;
-            }
             
             textarea {
-                width: 100%;
                 height: 13em;
+                width: 95%;
             }
         }
         
@@ -1069,8 +1065,5 @@ html.ie {
     @import "desktop";
 }
 
-html.ie7, html.ie6 {
-    @import "ie";
-}
-
+@import "ie";
 @import "zoom";

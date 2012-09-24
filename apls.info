@@ -1,6 +1,6 @@
 name = apls
 description = APLS theme for Drupal 7
-screenshot = screenshot.jpg
+screenshot = screenshot.png
 core = "7.x"
 engine = phptemplate
 

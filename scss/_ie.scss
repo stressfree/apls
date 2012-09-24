@@ -1,5 +1,31 @@
-header {
-    #logo {
-        margin-left: -$cols3;
+html.ie7 {
+    header {
+        #logo {
+            margin-left: -$cols3;
+        }
+    }
+}
+
+html.ie6 {
+    header {
+        #logo {
+            margin-left: -$cols4;
+        }
+    }
+    
+    div#main {
+        div#content-inner {
+            background: url('../images/ie-bg.png') top left repeat-y #e5f4f3;
+        }
+    }
+
+    body.node-type-homepage {
+        div.group_content {
+            width: 333px;
+        }
+    }
+    body.node-type-homepage div.group_images {
+        margin-left: 0;
+        float: left;
     }
 }
