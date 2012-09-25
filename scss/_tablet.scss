@@ -21,7 +21,9 @@ header {
             display: inline;
         }
         
-        #block-system-main-menu, #block-menu-menu-main-menu-authenticated-  {
+        #block-system-main-menu, 
+        #block-menu-menu-main-menu-authenticated-,
+        #block-menu-menu-main-menu-administrator-  {
             float: none; 
             padding: 15px 0 5px 0;
             border-bottom: 3px solid $darkgreen;
@@ -209,7 +211,9 @@ body.page-contact {
     }
 }
 
-body.page-courses, body.page-instruct {
+body.page-courses,
+body.page-instruct, 
+body.page-upcoming {
     div#main-content {
         div.views-row {
             width: $cols4;

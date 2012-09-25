@@ -22,7 +22,9 @@ header {
     nav {
         width: $cols9 + $gutter;
         
-        #block-system-main-menu, #block-menu-menu-main-menu-authenticated- {                
+        #block-system-main-menu, 
+        #block-menu-menu-main-menu-authenticated-,
+        #block-menu-menu-main-menu-administrator- {                
             padding: 68px 0 5px 0;
             width: $cols9 + $gutter;
             
@@ -161,7 +163,9 @@ body.node-type-homepage {
     }
 }
 
-body.page-courses, body.page-instruct {
+body.page-courses, 
+body.page-instruct, 
+body.page-upcoming {
     div#main-content {
         div.view-header {
             position: absolute;

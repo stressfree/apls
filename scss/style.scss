@@ -127,7 +127,9 @@ header {
             }
         }
         
-        #block-system-main-menu, #block-menu-menu-main-menu-authenticated- {
+        #block-system-main-menu, 
+        #block-menu-menu-main-menu-authenticated-, 
+        #block-menu-menu-main-menu-administrator- {
             padding: 0;
             float: right;
                 
@@ -603,7 +605,9 @@ body.page-contact {
 }
 
 
-body.page-courses, body.page-instruct {
+body.page-courses, 
+body.page-instruct, 
+body.page-upcoming {
     div#main-content {
         div.view-header {
             h4 {
@@ -718,6 +722,10 @@ body.page-civicrm-event {
             &.error {
                 border: 2px solid $hovertext!important;
             }
+        }
+        
+        div.status {
+            margin-bottom: 2em!important;
         }
         
         input.form-text, textarea {
