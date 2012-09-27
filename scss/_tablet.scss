@@ -211,15 +211,35 @@ body.page-contact {
     }
 }
 
+body.page-resources, 
+body.page-resources-admin {
+    div#main-content {
+        div.view-leftcol {
+            float: left;
+            margin: 0 $gutter 0 0;
+            width: $cols4;
+        }
+        
+        div.view-rightcol {
+            float: right;
+            width: $cols4;            
+        }
+        
+        div.views-row-odd {
+            clear: left;
+        }
+    }
+}
+
 body.page-courses,
 body.page-instruct, 
 body.page-upcoming {
     div#main-content {
         div.views-row {
-            width: $cols4;
+            float: left;
             margin: 0 $gutter $gutter 0;
             padding: 0 0 $gutter/2 0;
-            float: left;
+            width: $cols4;
         }
         
         div.views-row-odd {

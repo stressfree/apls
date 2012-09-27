@@ -376,7 +376,8 @@ div#main {
             div.register_link-section,
             p.nextStep, div.iCal_links-section,
             span.user-page-link, div.event_info_link-section,
-            div.links {
+            div.links, div.views-field-edit-node span,
+            div.view-header p.new-section {
                 text-transform: uppercase;
                 font-family: $sansseriffont;
                 color: $darktext;
@@ -713,6 +714,51 @@ body.page-upcoming {
     }
 }
 
+body.page-resources,
+body.page-resources-admin {
+    div#main-content {        
+        
+        div.view-header {
+            margin: 0 0 1.5em 0;
+            font-family: $seriffont;
+        }
+        
+        div.views-row {
+            border-bottom: 1px dashed $darkgreen;
+            margin: 0 0 $gutter 0;
+        }
+        
+        div.views-field-title {
+            color: $darktext;
+            font-family: $seriffont;
+            font-size: 1.1em;
+        }
+        
+        div.views-field-field-document {
+            font-size: 0.9em;
+            
+            li {
+                background: none!important;
+                padding: 0!important;
+                margin-left: 22px!important;
+            }
+            
+            img {
+                position: absolute;
+                margin: 0.2em 0 0 -22px!important;
+            }
+            
+            a {
+                text-decoration: none;
+                
+                &:hover {
+                    color: $hovertext;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
 
 body.page-civicrm-event {
     div#main-content {
