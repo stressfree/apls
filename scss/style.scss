@@ -967,15 +967,44 @@ body.node-type-webform {
 }
 
 body.page-user-edit {
+    
     div {
         &#main div#content-header {
             display: none;
         }
+        
+        &#main-content {    
+            div.crm-section {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+            
+            div.label {
+                font-size: 0.9em!important;
+                float: none!important;
+                text-align: left!important;
+                width: 100%!important;
+            }
+            
+            input.form-text, textarea, select {
+                border: 1px solid $white!important;
+                
+                &.error {
+                    border: 2px solid $hovertext!important;
+                }
+            }
+            
+            input.form-text, textarea {
+                width: 95%!important;
+            }
+        }
+        
         &.form-item-current-pass, &.form-item-pass {
             div.description {
                 display: none;
             }
         }
+        
         &.form-item-mail {
             display: none;
         }   

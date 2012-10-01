@@ -312,6 +312,10 @@ body.page-civicrm-event {
             
             p {
                 margin: 2em 0 0.7em 40px!important;
+                
+                &.form-required {
+                    margin: 0 0 1.5em 40px!important;
+                }
             }
                 
             div.participant_note-section {                
@@ -331,8 +335,42 @@ body.page-civicrm-event {
     }
 }
 
+body.page-user-edit {
+    div#crm-container {
+        div.label {
+            float: left!important;
+            font-size: 0.9em!important;
+            text-align: right!important;
+            width: 10.5em!important;                
+        }
+        
+        p {
+            margin: 2em 0 0.7em 40px!important;
+             
+            &.form-required {
+                margin: 1em 0 1em 40px!important;
+            }
+        }     
+    } 
+    
+    div#main-content {    
+        input.form-text, textarea {
+            width: auto!important;
+        }
+    }
+            
+    div#edit-actions {
+        margin-left: 10em;
+    }
+}
+
 body.node-type-webform {
     div#main-content {
+    
+        p.form-required {
+            margin: 1em 0 1em 40px!important;
+        }
+    
         div.form-item {            
             label {
                 float: left;
