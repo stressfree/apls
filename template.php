@@ -44,4 +44,9 @@ function apls_preprocess_views_view__resources_admin(&$variables) {
   $variables['half'] = ceil((count($view->result) / 2) + 1);
 }
   
+function apls_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'user_profile_form') {
+    $form['contact']['#access'] = FALSE;
+  }
+}
 ?>

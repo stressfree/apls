@@ -25,15 +25,11 @@ header {
         #block-menu-menu-main-menu-authenticated-,
         #block-menu-menu-main-menu-administrator-  {
             float: none; 
-            padding: 15px 0 5px 0;
+            padding: 36px 0 5px 0;
             border-bottom: 3px solid $darkgreen;
             
             h2, li {
                 padding: 0 0 0 1.1em;
-            }
-        
-            h2 {
-                display: block;
             }
             
             li {
@@ -49,10 +45,6 @@ header {
             clear: none;
             padding: 0;
             z-index: 2000;
-            
-            h2 {
-                display: inline;
-            }
         }
         
         #block-user-login {

@@ -966,6 +966,21 @@ body.node-type-webform {
     }
 }
 
+body.page-user-edit {
+    div {
+        &#main div#content-header {
+            display: none;
+        }
+        &.form-item-current-pass, &.form-item-pass {
+            div.description {
+                display: none;
+            }
+        }
+        &.form-item-mail {
+            display: none;
+        }   
+    } 
+}
 
 div.crm-actions-ribbon {
     display: none;

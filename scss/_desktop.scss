@@ -40,6 +40,10 @@ header {
     
         #block-system-user-menu, #block-user-login {
             width: $cols9 + $gutter;
+            
+            h2 {
+                display: inline;
+            }
         }
         
         #block-user-login {
