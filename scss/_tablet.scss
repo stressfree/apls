@@ -187,7 +187,7 @@ body.page-contact {
                 width: 11.5em;
             }
             
-            input {
+            input.form-text {
                 width: 380px!important;
             }
                 
@@ -350,12 +350,22 @@ body.page-user-edit {
             &.form-required {
                 margin: 1em 0 1em 40px!important;
             }
-        }     
+        } 
     } 
     
-    div#main-content {    
+    div#main-content {
         input.form-text, textarea {
             width: auto!important;
+        }
+        
+        div.password-confirm {
+            float: right;
+        }
+        
+        input#edit-current-pass, 
+        input.password-field, 
+        input.password-confirm {
+            width: 14.5em!important;
         }
     }
             

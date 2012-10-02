@@ -588,7 +588,7 @@ body.page-contact {
                 font-size: 0.9em;
             }
             
-            input {
+            input.form-text {
                 width: 95%;
             }
             
@@ -966,11 +966,52 @@ body.node-type-webform {
     }
 }
 
+body.page-user-password {
+    div#main div#content-header {
+        display: none;
+    }
+}
+
 body.page-user-edit {
     
     div {
         &#main div#content-header {
             display: none;
+        }
+        
+        &.password-strength {
+            float: none;
+            margin: 0.5em 0 1em 0;
+            width: auto;
+        }
+        
+        &.password-confirm {
+            float: none;
+            margin: 0.1em 0 0.1em 0;
+            width: auto;
+        }
+        
+        &.password-suggestions {
+            border: 0 none;
+            background: #004c56;
+            color: #fff;
+            font-family: $seriffont;
+            font-size: 0.9em;
+            line-height: 1.6em;
+            margin-bottom: 1em;
+            padding: 1em;
+            width: 95%;
+            
+            li {
+                background: none!important;
+                list-style: circle!important;
+                margin-left: 3em!important;
+                padding-left: 0.3em!important;
+            }
+        }
+        
+        &.password-parent, &.confirm-parent {
+            width: auto;
         }
         
         &#main-content {    
@@ -994,7 +1035,7 @@ body.page-user-edit {
                 }
             }
             
-            input.form-text, textarea {
+            input.form-text, textarea, input.password-field {
                 width: 95%!important;
             }
         }
