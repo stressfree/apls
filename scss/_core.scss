@@ -945,6 +945,50 @@ body.node-type-webform {
     }
 }
 
+body.node-type-resources {
+    div.field-type-file {
+        div.field-label {
+            background: #fff;
+            color: $darktext;
+            font-family: $seriffont;
+            font-size: 1.2em;      
+            font-weight: normal;   
+            left: -10px;
+            margin: 0 -20px 0.8em 0 !important;
+            padding: 0.5em 10px 0.4em !important;
+            position: relative;   
+        }
+        
+        div.field-items {
+            table {
+                width: 100%;
+            }
+            
+            tbody {
+                border-top: 0 none;
+            }
+            
+            tr {                
+                background: none;
+            }
+            
+            th {
+                display: none;
+            }
+            
+            td {
+                padding: 0.3em 0;
+                text-align: right;
+                
+                span {
+                    display: block;
+                    text-align: left;                    
+                }
+            }
+        }
+    }
+}
+
 body.page-user-password {
     div#main div#content-header {
         display: none;
