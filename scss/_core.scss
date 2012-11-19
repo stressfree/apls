@@ -1181,6 +1181,53 @@ textarea {
 }
 
 
+// Example programme formatting
+ul.programmeTable {
+    font-family: $seriffont;
+    font-size: 1.4em;
+    height: 1.1em;
+    
+    li {
+        background: none!important;
+        float: left;
+        font-weight: 700;
+        list-style-type: none;
+        padding: 0 1em 0 0!important;
+        
+        a {
+            font-weight: 400;
+        }
+    }
+}
+
+table.programmeTable {
+    margin: 0.5em 0 3em 0;
+    width: 100%;
+    
+    td {
+        padding: 0.8em 1em 0.3em 1em;
+        vertical-align: top;
+        border-bottom: 1px solid $darkgreen;
+        
+        &.time {
+            background: $darkgreen;
+            border-bottom: 1px solid #fff;
+            color: $darktext;
+            font-size: 1.1em;
+            font-family: $sansseriffont;
+            text-align: center;
+            white-space: nowrap;
+            width: 8em;
+        }
+        
+        &.break {
+            background: #e8e8e8;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+    }
+    
+}
 // Format the tabs
 ul.tabs {
     border-bottom: none;
