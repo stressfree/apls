@@ -133,11 +133,11 @@ div#main {
 }
 
 body.node-type-homepage {   
-    div.group_content {
+    div.group-content {
         width: $cols9 + $gutter;
     }
     
-    div.group_images {
+    div.group-images {
         width: $cols9 + $gutter;
         height: 455px; 
     }
@@ -219,6 +219,20 @@ body.page-resources-admin {
         
         div.views-row-odd {
             clear: left;
+        }
+    }
+}
+
+body.page-reports {
+    div#main-content {
+        div.views-row {
+            float: left;
+            width: $cols4;
+        }
+        
+        div.views-row-odd {
+            clear: left;
+            margin-right: $gutter;
         }
     }
 }

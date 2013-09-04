@@ -286,7 +286,7 @@ div#main {
         }
     }
     
-    div#main-content {    
+    div#main-content { 
         div.content {
             margin: 0 $gutter;
             padding: $gutter 0;
@@ -392,7 +392,7 @@ div#main {
                 display: none;
             }
                         
-            div.group_sidebar {
+            div.group-sidebar {
                 margin: 1.5em 0 0 0;
             
                 div.field-name-field-sidebar-title div.field-item {
@@ -475,7 +475,7 @@ body.node-type-homepage {
         }
     }
     
-    div.group_content {
+    div.group-content {
         padding: 30px 0;
         background: $darkgreen;
         
@@ -502,7 +502,7 @@ body.node-type-homepage {
         }
     }
     
-    div.group_images {        
+    div.group-images {        
         div.field-item {
             position: absolute;
         }
@@ -693,8 +693,10 @@ body.page-upcoming {
     }
 }
 
+
 body.page-resources,
-body.page-resources-admin {
+body.page-resources-admin,
+body.page-reports {
     div#main-content {        
         
         div.view-header {
@@ -707,10 +709,16 @@ body.page-resources-admin {
             margin: 0 0 $gutter 0;
         }
         
+        div.view-content {
+            h3 {
+                clear: left;
+                font-size: 1.3em;
+            }
+        }
+        
         div.views-field-title {
-            color: $darktext;
             font-family: $seriffont;
-            font-size: 1.1em;
+            font-size: 1em;
         }
         
         div.views-field-field-document {
@@ -735,6 +743,16 @@ body.page-resources-admin {
                     text-decoration: underline;
                 }
             }
+        }
+    }
+}
+
+body.page-resources,
+body.page-resources-admin {
+    div#main-content {        
+        div.views-field-title {
+            color: $darktext;
+            font-size: 1.1em;
         }
     }
 }
@@ -846,7 +864,7 @@ body.page-civicrm-event {
                     margin: 0 0 0.7em 0px;
                 }
                 
-                textarea#participant_note {
+                textarea#participant-note {
                     height: 5em;
                 }
             }
@@ -945,7 +963,9 @@ body.node-type-webform {
     }
 }
 
-body.node-type-resources {
+body.node-type-resources, 
+body.node-type-course-report,
+body.node-type-board-report {
     div.field-type-file {
         div.field-label {
             background: #fff;
@@ -986,6 +1006,10 @@ body.node-type-resources {
                 }
             }
         }
+    }
+    
+    div.field-name-field-start-date {
+        margin: 0 0 0.7em 0;
     }
 }
 
@@ -1111,17 +1135,17 @@ div.event_fees-section {
         width: auto!important;
     }
     
-    td.price_set_field-label {
+    td.price-set-field-label {
         padding-left: 0!important;
     }
     
-    td.price_set_option_group-label {
+    td.price-set-option-group-label {
         color: $darktext;
         font-family: $seriffont;
         padding-left: 0!important;
     }
     
-    td.price_set_option-label {
+    td.price-set-option-label {
         padding-left: 0!important;
     }
 }
@@ -1138,7 +1162,7 @@ label, div.label {
     margin-right: 0.7em;
 }
 
-.ac_results-inner, .crm-participant-list-inner, .crm-event-links-list-inner, 
+.ac-results-inner, .crm-participant-list-inner, .crm-event-links-list-inner, 
 .crm-contribpage-links-list-inner, .crm-create-new-list-inner, 
 .crm-contact-actions-list-inner {
     background: #fff;

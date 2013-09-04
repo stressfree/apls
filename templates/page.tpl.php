@@ -43,8 +43,7 @@
         <?php endif; ?>
       </div>
       <?php endif; ?>
-      <div id="content-inner">
-        
+      <div id="content-inner">   
         <div id="page-title">
             <div class="title-content">
                 <?php print render($title_prefix); ?>

@@ -1,6 +1,6 @@
 {
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
-  "creatorBuild" : "7839",
+  "creatorBuild" : "8317",
   "files" : {
     "\/templates\/html.tpl.php" : {
       "ignoreWasSetByUser" : 0,
@@ -37,7 +37,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/images\/sidebar-bg.png",
-      "processed" : 0,
+      "processed" : 1,
       "outputAbbreviatedPath" : "\/images\/sidebar-bg.png",
       "initialSize" : 2982,
       "fileType" : 8192
@@ -53,17 +53,6 @@
       "initialSize" : 216,
       "fileType" : 8192
     },
-    "\/js\/script.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/script.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/script.min.min.js",
-      "fileType" : 64
-    },
     "\/favicon\/apple-touch-icon-114x114-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -74,6 +63,17 @@
       "outputAbbreviatedPath" : "\/favicon\/apple-touch-icon-114x114-precomposed.png",
       "initialSize" : 4817,
       "fileType" : 8192
+    },
+    "\/js\/script.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/script.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/script.min.min.js",
+      "fileType" : 64
     },
     "\/images\/main-bullet.png" : {
       "ignoreWasSetByUser" : 0,
@@ -113,18 +113,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/scss\/_desktop.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scss\/_desktop.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_desktop.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/scss\/_core.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -134,6 +122,18 @@
       "outputStyle" : 3,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/css\/_core.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/scss\/_desktop.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/scss\/_desktop.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_desktop.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -149,6 +149,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/images\/horizontalbar-bg.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/horizontalbar-bg.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/horizontalbar-bg.png",
+      "initialSize" : 3071,
+      "fileType" : 8192
+    },
     "\/scss\/_zoom.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -161,26 +172,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/images\/horizontalbar-bg.png" : {
+    "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo5395.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/horizontalbar-bg.png",
+      "inputAbbreviatedPath" : "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo5395.png",
       "processed" : 1,
-      "outputAbbreviatedPath" : "\/images\/horizontalbar-bg.png",
-      "initialSize" : 3071,
-      "fileType" : 8192
-    },
-    "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo.png",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo.png",
-      "initialSize" : 12173,
+      "outputAbbreviatedPath" : "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo5395.png",
+      "initialSize" : 11871,
       "fileType" : 8192
     },
     "\/screenshot.png" : {
@@ -205,15 +205,15 @@
       "initialSize" : 3012,
       "fileType" : 8192
     },
-    "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo5395.png" : {
+    "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo5395.png",
+      "inputAbbreviatedPath" : "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo.png",
       "processed" : 1,
-      "outputAbbreviatedPath" : "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo5395.png",
-      "initialSize" : 11871,
+      "outputAbbreviatedPath" : "\/civicrm\/CRM\/Event\/Badge\/CRM_Event_Badge_Logo.png",
+      "initialSize" : 12173,
       "fileType" : 8192
     },
     "\/scss\/_tablet.scss" : {
@@ -289,6 +289,7 @@
   ],
   "projectSettings" : {
     "hamlNoEscapeInAttributes" : 0,
+    "kitAutoOutputPathStyle" : 0,
     "lessOutputStyle" : 0,
     "hamlAutoOutputPathReplace2" : "",
     "draggedImportConcatenationStyle" : 1,
@@ -301,7 +302,10 @@
     "sassAutoOutputPathStyle" : 2,
     "stylusAutoOutputPathReplace2" : "css",
     "lessAutoOutputPathStyle" : 2,
+    "lessIECompatibility" : 1,
     "genericWebpageFileExtensionsString" : "html, xhtml, htm, shtml, shtm, php, jsp, asp, aspx, erb, ctp",
+    "lessStrictUnits" : 0,
+    "lessStrictMath" : 0,
     "coffeeMinifyOutput" : 1,
     "javascriptOutputSuffix" : ".min",
     "jadeOutputStyle" : 0,
@@ -320,6 +324,7 @@
     "hamlOutputStyle" : 0,
     "stylusAutoOutputPathRelativePath" : "..\/css",
     "jsCheckerIndent" : 4,
+    "kitAutoOutputPathRelativePath" : "",
     "lessAutoOutputPathReplace2" : "css",
     "jadeAutoOutputPathReplace2" : "",
     "shouldRunBless" : 0,
@@ -344,35 +349,36 @@
     "coffeeAutoOutputPathReplace1" : "",
     "hamlUseDoubleQuotes" : 0,
     "coffeeAutoOutputPathReplace2" : "",
+    "kitAutoOutputPathReplace1" : "",
     "uglifyReservedNamesString" : "",
+    "coffeeOutputStyle" : 0,
+    "slimAutoOutputPathRelativePath" : "",
     "jsHintFlags" : {
       "latedef" : 1,
       "newcap" : 1,
       "curly" : 1,
       "trailing" : 1,
       "nonew" : 1,
-      "withstmt" : 0,
+      "es3" : false,
       "yui" : false,
       "mootools" : 0,
       "proto" : 0,
       "boss" : 0,
       "funcscope" : 0,
-      "regexdash" : 0,
       "jquery" : 1,
       "esnext" : 0,
       "camelcase" : false,
-      "es5" : 0,
       "dojo" : 0,
       "strict" : 0,
       "devel" : 1,
-      "onecase" : 0,
       "wsh" : 0,
       "nonstandard" : 0,
       "asi" : 0,
-      "smarttabs" : 0,
+      "moz" : false,
       "rhino" : 0,
-      "noempty" : 0,
+      "smarttabs" : 0,
       "lastsemic" : 0,
+      "noempty" : 0,
       "eqnull" : 0,
       "eqeqeq" : 1,
       "couch" : 0,
@@ -396,46 +402,37 @@
       "multistr" : 0,
       "shadow" : 0,
       "sub" : 0,
-      "regexp" : 1,
+      "plusplus" : 0,
       "scripturl" : 0,
       "forin" : 0,
       "loopfunc" : 0,
-      "laxbreak" : 0,
-      "plusplus" : 0
+      "laxbreak" : 0
     },
-    "coffeeOutputStyle" : 0,
-    "slimAutoOutputPathRelativePath" : "",
     "jsLintFlags" : {
       "white" : 0,
-      "bitwise" : 0,
+      "unparam" : 0,
       "regexp" : 0,
+      "nomen" : 0,
       "vars" : 0,
-      "anon" : 0,
       "sub" : 0,
       "stupid" : 0,
-      "nomen" : 0,
-      "unparam" : 0,
+      "continue" : false,
+      "bitwise" : 0,
       "newcap" : 0,
-      "'continue'" : 0,
       "sloppy" : 0,
-      "fragment" : 0,
-      "undef" : 0,
+      "closure" : false,
       "es5" : 0,
       "browser" : 1,
       "properties" : 0,
-      "forin" : 0,
       "plusplus" : 0,
       "debug" : 0,
+      "forin" : 0,
       "eqeq" : 0,
-      "confusion" : 0,
       "evil" : 0,
-      "on" : 0,
-      "cap" : 0,
-      "windows" : 0,
-      "devel" : 0,
-      "rhino" : 0,
       "node" : 0,
-      "css" : 0
+      "rhino" : 0,
+      "devel" : 0,
+      "ass" : false
     },
     "uglifyFlags" : {
       "no-mangle-functions" : 0,
@@ -456,8 +453,16 @@
     "slimAutoOutputPathReplace2" : "",
     "jadeCompileDebug" : 1,
     "slimRailsCompatible" : 0,
+    "kitAutoOutputPathReplace2" : "",
+    "lessRelativeURLS" : 0,
     "lessDebugStyle" : 0,
     "javascriptAutoOutputPathRelativePath" : "",
     "slimAutoOutputPathStyle" : 0
+  },
+  "projectAttributes" : {
+    "bourbonEnabled" : 0,
+    "displayValue" : "APLS",
+    "displayValueWasSetByUser" : 1,
+    "compassEnabled" : 0
   }
 }

@@ -93,7 +93,7 @@ div#main {
                 padding: 0;
             }
             
-            div.group_sidebar {
+            div.group-sidebar {
                 position: absolute;
                 top: 200px;              
                 margin: 0;
@@ -152,7 +152,7 @@ body.node-type-homepage {
         display: none;
     }
     
-    div.group_content {
+    div.group-content {
         width: $cols5;
         float: left;
         min-height: 395px;    
@@ -162,7 +162,7 @@ body.node-type-homepage {
         } 
     }
     
-    div.group_images {
+    div.group-images {
         margin-left: $cols5;
     }
 }
