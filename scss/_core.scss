@@ -1,45 +1,54 @@
 body {
-    line-height: 1.5em;
     font-family: 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.5em;
 }
 
 a {
     color: $darktext;
-    
     &:hover {
         color: $hovertext;
     }
 }
 
 #crm-container {
-    
     fieldset {
         border-top: none;
-        
         legend {
-            color: $darktext;
             font-family: $sansseriffont;
             font-size: 1.2em;
             font-weight: normal;
-            padding: 0.5em 0 1em 0;
+            padding: .5em 0 1em 0;
             text-transform: uppercase;
+            color: $darktext;
         }
     }
-    
+    input.crm-form-submit {
+
+    }
     a {
         color: $darktext!important;
-    
         &:hover {
-            color: $hovertext!important;
             text-decoration: underline;
+            color: $hovertext!important;
         }
     }
-    
     div.header-dark {
-        border-radius: 0px!important;
-        -moz-border-radius: 0px!important;
-        -webkit-border-radius: 0px!important;
-        -khtml-border-radius: 0px!important;
+        -webkit-border-radius: 0!important;
+           -moz-border-radius: 0!important;
+                border-radius: 0!important;
+
+        -khtml-border-radius: 0!important;
+    }
+    table {
+        font-size: 1em;
+        tr {
+            td:first-child {
+                padding-left: 0px;
+            }
+        }
+    }
+    .crm-public-footer {
+        display: none;
     }
 }
 
@@ -48,152 +57,132 @@ a {
 }
 
 header {
+    font-family: $sansseriffont;
     margin: 0 $gutter/2;
     padding: 10px 0 0 0;
-    font-family: $sansseriffont;
-    
     #logo {
         position: absolute;
-        height: 90px;
         width: $cols2 + $gutter;
+        height: 90px;
         margin: 0;
-        
         img {
             width: 100%;
         }
     }
-    
     hgroup {
+        float: left;
         width: $cols2 + $gutter;
         height: 90px;
-        float: left;
         margin: 0;
-        
         h2 {
-            margin: 10px 10px;
             font-size: 1.1em;
             font-weight: normal;
+            margin: 10px 10px;
             color: $headertext;
         }
-    }    
-    
+    }
     nav {
         font-size: 1em;
-                  
         h2 {
-            display: none;
             font-size: 1em;
-            color: $navtext;
             font-weight: normal;
+            display: none;
+            color: $navtext;
         }
-        
         li {
             list-style: none;
         }
-        
         a {
-            color: $navlink;
             text-decoration: none;
-            
+            color: $navlink;
             &.active-trail {
                 font-weight: bold;
                 color: $navselected;
             }
-            
             &:hover {
-                color: $hovertext;
                 text-decoration: underline;
+                color: $hovertext;
             }
         }
-        
-        #block-system-main-menu, 
-        #block-menu-menu-main-menu-authenticated-, 
+        #block-system-main-menu,
+        #block-menu-menu-main-menu-authenticated-,
         #block-menu-menu-main-menu-administrator- {
-            padding: 0;
             float: right;
-                
-            h2, li {
+            padding: 0;
+            h2,
+            li {
                 font-size: 1em;
                 margin: 0;
-                padding: 0 0 0 0.5em;
-                text-transform: uppercase;     
+                padding: 0 0 0 .5em;
+                text-transform: uppercase;
             }
             li {
                 list-style: none;
             }
         }
-        
-        #block-system-user-menu, #block-user-login {
+        #block-system-user-menu,
+        #block-user-login {
             clear: both;
-            padding: 0.5em 0 0 0;
-            
-            h2, li {                
-                font-size: 0.9em;
+            padding: .5em 0 0 0;
+            h2,
+            li {
+                font-size: .9em;
                 margin: 0;
-                padding: 0 0 0 0.6em;
+                padding: 0 0 0 .6em;
             }
-            
-            ul, li {
+            ul,
+            li {
                 display: inline;
             }
-            
             li {
                 text-transform: uppercase;
             }
         }
-        
         #block-user-login {
             h2 {
                 display: block;
-                text-transform: uppercase;
                 cursor: pointer;
+                text-transform: uppercase;
                 color: $navlink;
-                
                 &:hover {
                     text-decoration: underline;
                     color: $hovertext;
                 }
-                
                 &.selected {
-                    color: $navselected;
                     font-weight: bold;
-                    
-                    &:hover {                       
+                    color: $navselected;
+                    &:hover {
                         color: $hovertext;
                     }
                 }
             }
-            
             form {
+                padding: 0 .5em;
+                text-align: right;
                 border: 1px solid $darkgreen;
                 background: $lightgreen;
-                padding: 0 0.5em;
-                text-align: right;
             }
         }
     }
 }
 
 footer {
+    font-family: $sansseriffont;
     clear: left;
     margin: 0 0 0 $gutter;
     padding: 0 0 1.5em 0;
     text-transform: uppercase;
-    font-family: $sansseriffont;
-    
     nav {
-        ul.menu {               
+        ul.menu {
             li {
-                list-style: none;
+                font-size: .9em;
                 float: left;
                 margin: 0 1.1em 0 0;
                 padding: 0;
-                font-size: 0.9em;
-                
+                list-style: none;
                 a {
-                    color: $navlink;
                     text-decoration: none;
-                    
+                    color: $navlink;
                     &:hover {
                         text-decoration: underline;
                         color: $hovertext;
@@ -202,206 +191,184 @@ footer {
             }
         }
     }
-    
     div.region-footer-bottom {
+        font-size: .9em;
         clear: left;
-        padding-top: 0.5em;
+        padding-top: .5em;
         color: #666;
-        font-size: 0.9em;
     }
 }
 
 div#main {
     clear: left;
-    padding: 10px 0 20px 0;
     margin: 0;
-    
+    padding: 10px 0 20px 0;
     div#content-header {
         position: absolute;
-        
         div.tabs {
             position: relative;
-            top: 0.1em;
             z-index: 1501;
+            top: .1em;
         }
     }
-    
     div#page-title {
-        padding: $gutter 0 0 0;
         margin: 0;
+        padding: $gutter 0 0 0;
         background: $darkgreen;
-        
         div.title-content {
             margin: 0 $gutter;
         }
-        
         h1 {
-            font-size: 1.5em;
-            line-height: 1.2em;
             font-family: $seriffont;
+            font-size: 1.5em;
             font-weight: normal;
-            color: $darktext;
+            line-height: 1.2em;
             margin: 0;
             padding: 0 0 10px 0;
-            
+            color: $darktext;
             span {
-                color: $white;
                 text-transform: capitalize;
+                color: $white;
             }
         }
     }
-    
-    div.messages, #crm-container #help, #crm-container .help {
-        border: 0 none;
-        border-radius: 0;
-        background: #004c56;
-        color: #fff;
+    div.messages,
+    #crm-container #help,
+    #crm-container .help {
         font-family: $seriffont;
-        font-size: 0.9em;
+        font-size: .9em;
         line-height: 1.6em;
         margin-bottom: 1em;
         padding: 1em;
-        
+        color: #fff;
+        border: 0 none;
+        border-radius: 0;
+        background: #004c56;
         p {
             margin: 0!important;
         }
-        
         a {
             color: $lightgreen!important;
         }
-        
         li {
-            background: none!important;
-            list-style: circle!important;
             margin-left: 3em!important;
-            padding-left: 0.3em!important;
+            padding-left: .3em!important;
+            list-style: circle!important;
+            background: none!important;
         }
-        
         div.inform-icon {
             display: none;
         }
-        
         div.bold {
             color: $white!important;
         }
     }
-    
-    div#main-content { 
+    div#main-content {
         div.content {
             margin: 0 $gutter;
             padding: $gutter 0;
-            
             div.content {
                 margin: 0;
                 padding: 0;
             }
-            
-            h2, h3, h4, h5, h6 {
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
                 font-family: $seriffont;
-                color: $darktext;
                 font-weight: normal;
-                margin: 0 0 0.3em 0;
-                padding: 0.8em 0 0 0;
+                margin: 0 0 .3em 0;
+                padding: .8em 0 0 0;
+                color: $darktext;
             }
-            
             p {
-                margin: 0 0 0.6em 0;
-            }     
-
-            ul {
-                margin: 0.3em 0 0.8em 0;
+                margin: 0 0 .6em 0;
             }
-            
+            ul {
+                margin: .3em 0 .8em 0;
+            }
             li {
-                margin: 0 0 0.3em 0;
+                margin: 0 0 .3em 0;
                 padding: 0 0 0 18px;
                 list-style: none;
-                background: url('../images/main-bullet.png') 0 0.3em no-repeat;
+                background: url('../images/main-bullet.png') 0 .3em no-repeat;
             }
-            
             hr {
-                border-top: 0px none;
-                border-bottom: 2px dashed $darktext;
-                border-left: 0px none;
-                border-right: 0px none;
+                clear: left;
                 margin: 0 0 2em 0;
                 padding: 1.5em 0 0 0;
+                border-top: 0 none;
+                border-right: 0 none;
+                border-bottom: 2px dashed $darktext;
+                border-left: 0 none;
                 background: none;
-                clear: left;
             }
-            
-            div.header-dark, div.bold {
-                background: none;
-                color: $darktext;
+            div.header-dark,
+            div.bold {
                 font-family: $seriffont;
                 font-weight: normal;
+                color: $darktext;
+                background: none;
             }
-            
             div.header-dark {
-                border-bottom: 1px solid $darkgreen;
                 font-size: 1.2em;
                 margin-top: 2em;
-                padding: 0 0 0.2em 0;
+                padding: 0 0 .2em 0;
+                border-bottom: 1px solid $darkgreen;
             }
-            
             div.bold {
                 margin-bottom: 1em;
             }
-        
             div.field-name-field-sidebar-files div.field-item,
             div.field-name-field-links div.field-item,
             div.view-header li,
             div.views-field-registration-link-text,
             div.register_link-section,
-            p.nextStep, div.iCal_links-section,
-            span.user-page-link, div.event_info_link-section,
-            div.links, div.views-field-edit-node span,
+            p.nextStep,
+            div.iCal_links-section,
+            span.user-page-link,
+            div.event_info_link-section,
+            div.links,
+            div.views-field-edit-node span,
             div.view-header p.new-section {
-                text-transform: uppercase;
                 font-family: $sansseriffont;
+                margin-bottom: .2em;
+                text-transform: uppercase;
                 color: $darktext;
-                margin-bottom: 0.2em;
-                
                 &::before {
-                    content: "// ";
+                    content: '// ';
                 }
-                
                 a {
-                    color: $darktext;                
-                    text-decoration: none;
-                    font-size: 0.95em;
+                    font-size: .95em;
                     padding: 0!important;
-                    
+                    text-decoration: none;
+                    color: $darktext;
                     &:hover {
                         text-decoration: underline;
                         color: $hovertext;
                     }
                 }
-                
                 img {
                     display: none;
                 }
             }
-            
             p.nextStep {
-                margin: 2em 0 1em 0;
                 display: none;
+                margin: 2em 0 1em 0;
             }
-            
             span.user-page-bullet {
                 display: none;
             }
-                        
             div.group-sidebar {
                 margin: 1.5em 0 0 0;
-            
                 div.field-name-field-sidebar-title div.field-item {
+                    font-family: $seriffont;
                     font-size: 1.2em;
                     line-height: 1.4em;
-                    margin: 0 0 0.4em;
+                    margin: 0 0 .4em;
+                    padding: 1em 0 .3em $gutter/2;
                     color: $white;
-                    font-family: $seriffont;                 
-                    padding: 1em 0 0.3em $gutter/2;
                     background: $darkgreen;
                 }
                 div.field-name-field-sidebar-files,
@@ -409,26 +376,22 @@ div#main {
                     margin: 0 0 0 $gutter/2;
                 }
             }
-            
             span.crm-button {
+                font-size: 1em!important;
                 border: none!important;
                 border-radius: 0!important;
-                font-size: 1em!important;
             }
         }
     }
-    
     div#main-content-footer {
         clear: left;
     }
-    
     div#content-inner {
-        background: $lightgreen;
-        overflow: hidden;
         position: relative;
+        overflow: hidden;
         width: 100%;
+        background: $lightgreen;
     }
-    
     div#sidebar-frame {
         position: absolute;
         z-index: 1500;
@@ -438,100 +401,85 @@ div#main {
 }
 
 body.node-type-homepage {
-
     div#page-title {
         display: none;
     }
-    
     div#main {
         div#main-content {
             div.region-content {
                 width: auto;
                 margin: 0;
             }
-            
             div.content {
-                padding: 0;
                 margin: 0;
+                padding: 0;
             }
         }
-        
         div#sidebar-frame {
             display: none;
         }
     }
-        
     div.group-dividertab {
-        width: $cols9 + $gutter;
         position: absolute;
+        z-index: 1500;
+        width: $cols9 + $gutter;
         height: $gutter;
         margin: 0;
         padding: 0;
-        z-index: 1500;
         background: url('../images/horizontalbar-bg.png') top left no-repeat;
-        
         h2 {
             display: none;
         }
     }
-    
     div.group-content {
         padding: 30px 0;
         background: $darkgreen;
-        
         div.field {
             margin: 0 $gutter;
         }
-        
         div.field-name-field-blurb {
-            color: $darktext;
             margin-bottom: 1.5em;
-            
+            color: $darktext;
             div.field-item {
-                font-size: 1.3em;
-                line-height: 1.5em;   
                 font-family: $seriffont;
-                text-shadow: 0px 1px 0px #e1e1e8;
+                font-size: 1.3em;
+                line-height: 1.5em;
+                text-shadow: 0 1px 0 #e1e1e8;
             }
         }
-        
         div.field-name-body {
-            color: $white;
-            margin-bottom: 1.5em;
             font-family: $seriffont;
+            margin-bottom: 1.5em;
+            color: $white;
         }
     }
-    
-    div.group-images {        
+    div.group-images {
         div.field-item {
             position: absolute;
         }
-        
         div.image-counter {
             position: absolute;
+            width: $cols9 - $gutter;
             margin-top: 400px;
             text-align: right;
-            width: $cols9 - $gutter;
-            
             li {
                 float: right;
                 width: 16px;
                 height: 16px;
-                background: none #dadcdc!important;
-                border-radius: 9px;
-                list-style: none!important;
                 margin: 0 10px 0 0!important;
                 padding: 0!important;
-                
+                list-style: none!important;
+                border-radius: 9px;
+                background: none #dadcdc!important;
                 a {
                     display: block;
-                    height: 16px;
                     width: 16px;
+                    height: 16px;
                     border-radius: 9px;
                     background: $white;
                 }
             }
-        }        
+        }
     }
 }
 
@@ -551,32 +499,27 @@ body.page-contact {
         div.block-system div.content {
             padding-top: 0!important;
         }
-        
-        div.contactPerson, div.contactPhone {
+        div.contactPerson,
+        div.contactPhone {
             margin: 0;
         }
-        
         div.contactPhone {
             a {
                 text-decoration: none;
             }
         }
-        
         div.form-item {
             label {
-                font-size: 0.9em;
+                font-size: .9em;
             }
-            
             input.form-text {
                 width: 95%;
             }
-            
             textarea {
-                height: 13em;
                 width: 95%;
+                height: 13em;
             }
         }
-        
         div.form-actions {
             clear: left;
             padding: 1em 0 0 0;
@@ -585,111 +528,96 @@ body.page-contact {
 }
 
 
-body.page-courses, 
-body.page-instruct, 
+body.page-courses,
+body.page-instruct,
 body.page-upcoming {
     div#main-content {
         div.view-header {
             h4 {
                 font-size: 1.1em;
-                color: $darktext!important;
                 padding-top: 0!important;
+                color: $darktext!important;
             }
             li {
-                background: none!important;
                 padding-left: 0!important;
+                background: none!important;
             }
         }
-        
         div.view-content {
             clear: left;
             padding-top: 1em;
         }
-        
         h3 {
-            clear: left;
-            background: #fff;
-            left: -10px;
-            margin: 0 -20px 0.8em 0!important;
-            padding: 0.5em 10px 0.4em 10px!important;
             position: relative;
+            left: -10px;
+            clear: left;
+            margin: 0 -20px .8em 0!important;
+            padding: .5em 10px .4em 10px!important;
+            background: #fff;
         }
-        
         div.views-row {
-            border-bottom: 1px dashed $darkgreen;
             margin: 0 0 $gutter 0;
+            border-bottom: 1px dashed $darkgreen;
         }
-        
-        div.views-field-title, div.views-field-nothing {
+        div.views-field-title,
+        div.views-field-nothing {
             font-family: $seriffont;
         }
-        
         div.views-field-title {
             font-size: 1.1em;
-            
             a {
                 text-decoration: none;
-                
                 &:hover {
                     text-decoration: underline;
                 }
             }
         }
-        
         div.views-field-nothing {
-            font-size: 0.9em;
+            font-size: .9em;
         }
-        
         div.view-header {
             h4 {
                 font-size: 1.1em;
-                color: $darktext!important;
                 padding-top: 0!important;
+                color: $darktext!important;
             }
             li {
-                background: none!important;
                 padding-left: 0!important;
+                background: none!important;
             }
         }
-        
         div.view-content {
             clear: left;
             padding-top: 1em;
         }
-        
         h3 {
-            clear: left;
-            background: #fff;
-            left: -10px;
-            margin: 0 -20px 0.8em 0!important;
-            padding: 0.5em 10px 0.4em 10px!important;
             position: relative;
+            left: -10px;
+            clear: left;
+            margin: 0 -20px .8em 0!important;
+            padding: .5em 10px .4em 10px!important;
+            background: #fff;
         }
-        
         div.views-row {
-            border-bottom: 1px dashed $darkgreen;
             margin: 0 0 $gutter 0;
+            border-bottom: 1px dashed $darkgreen;
         }
-        
-        div.views-field-title, div.views-field-nothing {
+        div.views-field-title,
+        div.views-field-nothing {
             font-family: $seriffont;
         }
-        
         div.views-field-title {
             font-size: 1.1em;
-            
             a {
                 text-decoration: none;
-                
                 &:hover {
                     text-decoration: underline;
                 }
             }
         }
-        
         div.views-field-nothing {
-            font-size: 0.9em;
-        }        
+            font-size: .9em;
+        }
     }
 }
 
@@ -697,50 +625,41 @@ body.page-upcoming {
 body.page-resources,
 body.page-resources-admin,
 body.page-reports {
-    div#main-content {        
-        
+    div#main-content {
         div.view-header {
-            margin: 0 0 1.5em 0;
             font-family: $seriffont;
+            margin: 0 0 1.5em 0;
         }
-        
         div.views-row {
-            border-bottom: 1px dashed $darkgreen;
             margin: 0 0 $gutter 0;
+            border-bottom: 1px dashed $darkgreen;
         }
-        
         div.view-content {
             h3 {
-                clear: left;
                 font-size: 1.3em;
+                clear: left;
             }
         }
-        
         div.views-field-title {
             font-family: $seriffont;
             font-size: 1em;
         }
-        
         div.views-field-field-document {
-            font-size: 0.9em;
-            
+            font-size: .9em;
             li {
-                background: none!important;
-                padding: 0!important;
                 margin-left: 22px!important;
+                padding: 0!important;
+                background: none!important;
             }
-            
             img {
                 position: absolute;
-                margin: 0.2em 0 0 -22px!important;
+                margin: .2em 0 0 -22px!important;
             }
-            
             a {
                 text-decoration: none;
-                
                 &:hover {
-                    color: $hovertext;
                     text-decoration: underline;
+                    color: $hovertext;
                 }
             }
         }
@@ -749,176 +668,149 @@ body.page-reports {
 
 body.page-resources,
 body.page-resources-admin {
-    div#main-content {        
+    div#main-content {
         div.views-field-title {
-            color: $darktext;
             font-size: 1.1em;
+            color: $darktext;
         }
     }
 }
 
 body.page-civicrm-event {
     div#main-content {
-        input.form-text, textarea, select {
+        input.form-text,
+        textarea,
+        select {
             border: 1px solid $white!important;
-            
             &.error {
                 border: 2px solid $hovertext!important;
             }
         }
-        
         div.status {
             margin-bottom: 2em!important;
         }
-        
-        input.form-text, textarea {
+        input.form-text,
+        textarea {
             width: 95%!important;
         }
-        
         span.crm-error {
-            background: none!important;
-            color: $hovertext!important;
             display: block;
-            margin: 0.1em 0 0 10em;
+            margin: .1em 0 0 10em;
+            color: $hovertext!important;
+            background: none!important;
         }
-        
         span.crm-error-label {
-            color: $darktext!important;
-            padding: 0!important;
             margin: 0!important;
+            padding: 0!important;
+            color: $darktext!important;
         }
-    
         div.price_set-section {
             div.content {
                 label {
                     font-family: $bodyfont;
+                    margin-left: .5em;
                     color: $black;
-                    margin-left: 0.5em;
                 }
             }
         }
-        
         div.event_type-section {
             float: left;
             margin: 0!important;
-                
             div.label {
                 display: none;
             }
-            
             div.content {
-                color: $darktext;
                 font-family: $seriffont;
                 font-size: 1.4em!important;
                 line-height: 1.5em;
+                color: $darktext;
             }
         }
-        
-        div.event_date_time-section {    
-            clear: left;
+        div.event_date_time-section {
             float: left;
+            clear: left;
             width: 100%!important;
-                    
-            label {
+            div.label {
                 display: none!important;
             }
-            
             div.content {
-                color: $darktext;
                 font-family: $sansseriffont;
-                text-transform: uppercase;
                 line-height: 1.5em;
-                
+                text-transform: uppercase;
+                color: $darktext;
                 abbr {
-                    white-space: nowrap;
-                    border-bottom: none!important;
                     font-family: $seriffont;
+                    white-space: nowrap;
                     text-transform: none;
+                    border-bottom: none!important;
                 }
-                
-                span {                
-                    padding: 0 0.5em;
-                }         
+                span {
+                    padding: 0 .5em;
+                }
             }
         }
-        
         div.event_description-section {
             p {
                 clear: left;
             }
         }
-        
         div.crm-event-register-form-block,
         div.crm-event-confirm-form-block fieldset {
             div.label {
-                font-size: 0.9em!important;
+                font-size: .9em!important;
                 float: none!important;
-                text-align: left!important;
                 width: 100%!important;
+                text-align: left!important;
             }
-            
             div.participant_note-section {
-              
                 span {
                     display: block;
-                    margin: 0 0 0.7em 0px;
+                    margin: 0 0 .7em 0;
                 }
-                
                 textarea#participant-note {
                     height: 5em;
                 }
             }
         }
-        
         div.event_address-section {
-            clear: left;
             float: none;
-            
+            clear: left;
             div.label {
-                text-align: left!important;
                 float: none!important;
+                text-align: left!important;
             }
         }
-        
         div.event_map-section {
-            background: #fff;
             border: 6px solid #fff;
-                    
+            background: #fff;
             br {
                 display: none;
             }
-            
             a {
+                font-size: .8em;
                 color: $darktext!important;
-                font-size: 0.8em;
-                
                 &:hover {
-                    color: $hovertext!important;
                     text-decoration: underline!important;
+                    color: $hovertext!important;
                 }
             }
-              
             div#google_map {
-                border: 1px solid $darktext;
                 width: 100%!important;
-    
+                border: 1px solid $darktext;
                 a {
                     font-size: 1em;
                 }
-                
                 br {
                     display: block;
                 }
-            }  
+            }
         }
-        
         div.register_link-top {
-           clear: left;
-           float: none!important;
-           margin-bottom: 1em!important; 
+            float: none!important;
+            clear: left;
+            margin-bottom: 1em!important;
         }
-        
-        div.pay_later-section {    
+        div.pay_later-section {
             div.label {
                 display: none;
             }
@@ -933,29 +825,24 @@ body.node-type-webform {
     div#main-content {
         div.form-item {
             clear: left;
-            
             label {
+                font-size: .9em!important;
                 display: block;
-                font-size: 0.9em!important;
                 text-align: left;
             }
-            
             input {
-                vertical-align: middle;
                 padding-left: 1px;
-                
+                vertical-align: middle;
                 &.error {
                     border: 2px solid $hovertext;
                 }
             }
-            
             p {
-                font-size: 0.9em;
+                font-size: .9em;
+                margin: 2em 0 .7em 0!important;
                 color: #696969;
-                margin: 2em 0 0.7em 0!important;
             }
         }
-        
         div.form-actions {
             clear: left;
             padding: 1em 0 0 0;
@@ -963,53 +850,46 @@ body.node-type-webform {
     }
 }
 
-body.node-type-resources, 
+body.node-type-resources,
 body.node-type-course-report,
 body.node-type-board-report {
     div.field-type-file {
         div.field-label {
-            background: #fff;
-            color: $darktext;
             font-family: $seriffont;
-            font-size: 1.2em;      
-            font-weight: normal;   
+            font-size: 1.2em;
+            font-weight: normal;
+            position: relative;
             left: -10px;
-            margin: 0 -20px 0.8em 0 !important;
-            padding: 0.5em 10px 0.4em !important;
-            position: relative;   
+            margin: 0 -20px .8em 0 !important;
+            padding: .5em 10px .4em !important;
+            color: $darktext;
+            background: #fff;
         }
-        
         div.field-items {
             table {
                 width: 100%;
             }
-            
             tbody {
                 border-top: 0 none;
             }
-            
-            tr {                
+            tr {
                 background: none;
             }
-            
             th {
                 display: none;
             }
-            
             td {
-                padding: 0.3em 0;
+                padding: .3em 0;
                 text-align: right;
-                
                 span {
                     display: block;
-                    text-align: left;                    
+                    text-align: left;
                 }
             }
         }
     }
-    
     div.field-name-field-start-date {
-        margin: 0 0 0.7em 0;
+        margin: 0 0 .7em 0;
     }
 }
 
@@ -1020,153 +900,147 @@ body.page-user-password {
 }
 
 body.page-user-edit {
-    
     div {
         &#main div#content-header {
             display: none;
         }
-        
         &.password-strength {
             float: none;
-            margin: 0.5em 0 1em 0;
             width: auto;
+            margin: .5em 0 1em 0;
         }
-        
         &.password-confirm {
             float: none;
-            margin: 0.1em 0 0.1em 0;
             width: auto;
+            margin: .1em 0 .1em 0;
         }
-        
         &.password-suggestions {
-            border: 0 none;
-            background: #004c56;
-            color: #fff;
             font-family: $seriffont;
-            font-size: 0.9em;
+            font-size: .9em;
             line-height: 1.6em;
+            width: 95%;
             margin-bottom: 1em;
             padding: 1em;
-            width: 95%;
-            
+            color: #fff;
+            border: 0 none;
+            background: #004c56;
             li {
-                background: none!important;
-                list-style: circle!important;
                 margin-left: 3em!important;
-                padding-left: 0.3em!important;
+                padding-left: .3em!important;
+                list-style: circle!important;
+                background: none!important;
             }
         }
-        
-        &.password-parent, &.confirm-parent {
+        &.password-parent,
+        &.confirm-parent {
             width: auto;
         }
-        
-        &#main-content {    
+        &#main-content {
             div.crm-section {
-                margin-top: 0.5em;
-                margin-bottom: 0.5em;
+                margin-top: .5em;
+                margin-bottom: .5em;
             }
-            
             div.label {
-                font-size: 0.9em!important;
+                font-size: .9em!important;
                 float: none!important;
-                text-align: left!important;
                 width: 100%!important;
+                text-align: left!important;
             }
-            
-            input.form-text, textarea, select {
+            input.form-text,
+            textarea,
+            select {
                 border: 1px solid $white!important;
-                
                 &.error {
                     border: 2px solid $hovertext!important;
                 }
             }
-            
-            input.form-text, textarea, input.password-field {
+            input.form-text,
+            textarea,
+            input.password-field {
                 width: 95%!important;
             }
         }
-        
-        &.form-item-current-pass, &.form-item-pass {
+        &.form-item-current-pass,
+        &.form-item-pass {
             div.description {
                 display: none;
             }
         }
-        
         &.form-item-mail {
             display: none;
-        }   
-    } 
+        }
+    }
 }
 
 div.crm-actions-ribbon {
     display: none;
-
     li {
-        background: none!important;
         margin-left: 0!important;
         padding-left: 0!important;
+        background: none!important;
     }
 }
 
-div.register_link-section, div.crm-submit-buttons {
+div.register_link-section,
+div.crm-submit-buttons {
     a {
-        background: none!important;
         display: inline!important;
-        border: none!important;
         float: none!important;
+        border: none!important;
+        background: none!important;
     }
     span {
-        background: none!important;
-        border: none!important;
-        display: inline!important;
         line-height: auto!important;
-        text-shadow: none!important;
+        display: inline!important;
         padding: 0!important;
+        border: none!important;
+        background: none!important;
+        text-shadow: none!important;
     }
 }
 
-div.event_fees-section { 
+div.event_fees-section {
     margin-top: 1.5em;
-    
     div.label {
         float: none!important;
-        text-align: left!important;
         width: auto!important;
+        text-align: left!important;
     }
-    
     td.price-set-field-label {
         padding-left: 0!important;
     }
-    
     td.price-set-option-group-label {
-        color: $darktext;
         font-family: $seriffont;
         padding-left: 0!important;
+        color: $darktext;
     }
-    
     td.price-set-option-label {
         padding-left: 0!important;
     }
 }
 
 
-label, div.label {
-    font-weight: normal;
+label,
+div.label {
     font-family: $seriffont;
+    font-weight: normal;
     color: $darktext;
 }
 
-#crm-container .crm-section .label, .crm-section .label {
+#crm-container .crm-section .label,
+.crm-section .label {
     width: 8em;
-    margin-right: 0.7em;
+    margin-right: .7em;
 }
 
-.ac-results-inner, .crm-participant-list-inner, .crm-event-links-list-inner, 
-.crm-contribpage-links-list-inner, .crm-create-new-list-inner, 
+.ac-results-inner,
+.crm-participant-list-inner,
+.crm-event-links-list-inner,
+.crm-contribpage-links-list-inner,
+.crm-create-new-list-inner,
 .crm-contact-actions-list-inner {
-    background: #fff;
     border: 1px solid $darktext;
+    background: #fff;
 }
 
 #printer-friendly {
@@ -1175,33 +1049,33 @@ label, div.label {
 
 input {
     &.form-text {
-        background: $white;
-        border: 1px solid $white;
         font-family: 'Helvetica', 'Arial', sans-serif;
         width: 95%;
+        border: 1px solid $white;
+        background: $white;
     }
-    &.form-submit {
-        background: $darkbackground!important;
+    &.form-submit,
+    &.crm-form-submit {
+        font-family: $seriffont!important;
+        font-size: 1em!important;
+        padding: .35em .7em .2em .7em!important;
+        text-transform: uppercase!important;
+        color: $white!important;
         border: 1px solid $darkgreen!important;
         border-radius: 0!important;
-        color: $white!important;
-        font-family: $seriffont!important;
+        background: $darkbackground!important;
         text-shadow: none!important;
-        font-size: 1em!important;
-        padding: 0.3em 0.7em 0.2em 0.7em!important;
-        text-transform: uppercase!important;
-                
         &:hover {
-            background: $darkgreen!important;
             color: $darktext!important;
+            background: $darkgreen!important;
         }
     }
 }
 textarea {
-    border: 1px solid $white;
-    background: $white;
     font-family: 'Helvetica', 'Arial', sans-serif;
     width: 95%;
+    border: 1px solid $white;
+    background: $white;
 }
 
 
@@ -1210,14 +1084,12 @@ ul.programmeTable {
     font-family: $seriffont;
     font-size: 1.4em;
     height: 1.1em;
-    
     li {
-        background: none!important;
-        float: left;
         font-weight: 700;
-        list-style-type: none;
+        float: left;
         padding: 0 1em 0 0!important;
-        
+        list-style-type: none;
+        background: none!important;
         a {
             font-weight: 400;
         }
@@ -1225,42 +1097,36 @@ ul.programmeTable {
 }
 
 table.programmeTable {
-    margin: 0.5em 0 3em 0;
     width: 100%;
-    
+    margin: .5em 0 3em 0;
     td {
-        padding: 0.8em 1em 0.3em 1em;
+        padding: .8em 1em .3em 1em;
         vertical-align: top;
         border-bottom: 1px solid $darkgreen;
-        
         &.time {
-            background: $darkgreen;
-            border-bottom: 1px solid #fff;
-            color: $darktext;
-            font-size: 1.1em;
             font-family: $sansseriffont;
+            font-size: 1.1em;
+            width: 8em;
             text-align: center;
             white-space: nowrap;
-            width: 8em;
+            color: $darktext;
+            border-bottom: 1px solid #fff;
+            background: $darkgreen;
         }
-        
         &.break {
-            background: #e8e8e8;
             font-style: italic;
             text-transform: uppercase;
+            background: #e8e8e8;
         }
     }
-    
 }
 // Format the tabs
 ul.tabs {
-    border-bottom: none;
     margin: 0;
     padding: 0;
-    
+    border-bottom: none;
     li {
         font-family: $bodyfont;
-        
         &.active {
             display: none;
         }
@@ -1268,18 +1134,19 @@ ul.tabs {
             color: $white;
             border: 1px solid $darkgreen;
             background: $darkgreen;
-            
             &:hover {
                 color: $hovertext;
                 border: 1px solid $darkgreen;
                 background: $lightgreen;
-            }     
+            }
         }
     }
 }
 
 // Field required style
-.marker, .form-required, #crm-container .crm-marker {
+.marker,
+.form-required,
+#crm-container .crm-marker {
     font-family: $seriffont;
     font-weight: normal!important;
     color: $hovertext!important;

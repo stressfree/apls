@@ -20,15 +20,15 @@ $gutter: 24px;	// The gutter-width of your grid in pixels
 // Column-widths in variables, in pixels
 //
 
- $cols1: ( 1 * ($column + $gutter) - $gutter);
- $cols2: ( 2 * ($column + $gutter) - $gutter);
- $cols3: ( 3 * ($column + $gutter) - $gutter);
- $cols4: ( 4 * ($column + $gutter) - $gutter);
- $cols5: ( 5 * ($column + $gutter) - $gutter);
- $cols6: ( 6 * ($column + $gutter) - $gutter);
- $cols7: ( 7 * ($column + $gutter) - $gutter);
- $cols8: ( 8 * ($column + $gutter) - $gutter);
- $cols9: ( 9 * ($column + $gutter) - $gutter);
+$cols1: ( 1 * ($column + $gutter) - $gutter);
+$cols2: ( 2 * ($column + $gutter) - $gutter);
+$cols3: ( 3 * ($column + $gutter) - $gutter);
+$cols4: ( 4 * ($column + $gutter) - $gutter);
+$cols5: ( 5 * ($column + $gutter) - $gutter);
+$cols6: ( 6 * ($column + $gutter) - $gutter);
+$cols7: ( 7 * ($column + $gutter) - $gutter);
+$cols8: ( 8 * ($column + $gutter) - $gutter);
+$cols9: ( 9 * ($column + $gutter) - $gutter);
 $cols10: (10 * ($column + $gutter) - $gutter);
 $cols11: (11 * ($column + $gutter) - $gutter);
 $cols12: (12 * ($column + $gutter) - $gutter);
@@ -42,8 +42,8 @@ $cols16: (16 * ($column + $gutter) - $gutter);
 // Column-widths in a function, in ems
 //
 
-@mixin width ($cols:1) {
-	width: ($cols * ($column + $gutter) - $gutter);
+@mixin width ($cols: 1) {
+    width: ($cols * ($column + $gutter) - $gutter);
 }
 
 
@@ -52,14 +52,41 @@ $cols16: (16 * ($column + $gutter) - $gutter);
 	except for form elements
 */
 
-body, div,
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, th, td,
-article, aside, figure, footer, header, hgroup, menu, nav, section {
-	margin: 0;
-	padding: 0;
-	border: 0;
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 
@@ -68,76 +95,106 @@ article, aside, figure, footer, header, hgroup, menu, nav, section {
 	adopted from http://necolas.github.com/normalize.css/
 */
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, nav, section, audio, canvas, video {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+    display: block;
 }
 
 html {
-	height: 100%; 
-	-webkit-text-size-adjust: 100%; 
-	-ms-text-size-adjust: 100%;
+    height: 100%;
+
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
 }
 
 body {
-    min-height: 100%;
     font-size: 100%;
+    min-height: 100%;
 }
 
-sub, sup {
-	font-size: 75%; 
-	line-height: 0; 
-	position: relative; 
-	vertical-align: baseline;
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
-	sup {top: -0.5em;}
-	sub {bottom: -0.25em;}
+sup {
+    top: -.5em;
+}
+sub {
+    bottom: -.25em;
+}
 
 pre {
-	white-space: pre; 
-	white-space: pre-wrap; 
-	word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
-b, strong {font-weight: bold;}
-abbr[title] {border-bottom: 1px dotted;}
+b,
+strong {
+    font-weight: bold;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
 
 table {
-    border-collapse: collapse;
     border-spacing: 0;
+    border-collapse: collapse;
 }
 
-a img, img {
-	-ms-interpolation-mode: bicubic;
-	border: 0;
+a img,
+img {
+    -ms-interpolation-mode: bicubic;
+    border: 0;
 }
 
-input, textarea, button, select {
-	margin: 0;
-	font-size: 100%;
-	line-height: normal;
-	vertical-align: baseline;
+input,
+textarea,
+button,
+select {
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+    vertical-align: baseline;
 }
 
-	button,
-	html input[type="button"], 
-	input[type="reset"], 
-	input[type="submit"] {
-	    cursor: pointer;
-	    -webkit-appearance: button;
-	}
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+    cursor: pointer;
 
-	input[type="checkbox"],
-	input[type="radio"] {
-		-webkit-box-sizing: border-box;
-		   -moz-box-sizing: border-box;
-			 -o-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-				box-sizing: border-box;
-	}
+    -webkit-appearance: button;
+}
 
-	textarea {overflow: auto;}
+input[type='checkbox'],
+input[type='radio'] {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+}
+
+textarea {
+    overflow: auto;
+}
 
 
 /*
@@ -145,21 +202,21 @@ input, textarea, button, select {
 */
 
 ::selection {
-	background: #004c56;
-	color: white;
+    color: white;
+    background: #004c56;
 }
 ::-moz-selection {
-	background: #004c56;
-	color: white;
+    color: white;
+    background: #004c56;
 }
 
 img::selection {
-	background: transparent;
+    background: transparent;
 }
 img::-moz-selection {
-	background: transparent;
+    background: transparent;
 }
 
 body {
-	-webkit-tap-highlight-color: rgba(0,76,86, 0.62);
+    -webkit-tap-highlight-color: rgba(0,76,86, .62);
 }

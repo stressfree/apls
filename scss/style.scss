@@ -1,9 +1,8 @@
-@import "frameless";
+@import 'frameless';
 
 @import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
 @import url(http://fonts.googleapis.com/css?family=Merriweather);
-
-$hovertext: #ff3333;
+$hovertext: #f33;
 $headertext: #414042;
 $navtext: #ccc;
 $navlink: #333;
@@ -14,25 +13,24 @@ $lightgreen: #e5f4f3;
 $darkbackground: #004c56;
 $black: #000;
 $white: #fff;
-
 $seriffont: 'Merriweather', 'Georgia', 'Times', 'Times New Roman', serif;
 $sansseriffont: 'Pontano Sans', 'Helvetica', 'Arial', sans-serif;
 $bodyfont: 'Helvetica', 'Arial', sans-serif;
 
-@import "core";
+@import 'core';
 
 @media screen and (min-width: 40.5em) {
-    @import "tablet";
+    @import 'tablet';
 }
 
 @media screen and (min-width: 61.5em) {
-    @import "desktop";
+    @import 'desktop';
 }
 
 html.ie {
-    @import "tablet";
-    @import "desktop";
+    @import 'tablet';
+    @import 'desktop';
 }
 
-@import "ie";
-@import "zoom";
+@import 'ie';
+@import 'zoom';

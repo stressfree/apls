@@ -4,48 +4,41 @@
 
 header {
     #logo {
-        margin-left: $cols1;
         width: $cols3 + $gutter;
         height: 133px;
+        margin-left: $cols1;
     }
-    
     hgroup {
-        margin-left: $cols1;
         width: $cols3 + $gutter;
         height: 133px;
-        
+        margin-left: $cols1;
         h2 {
-            margin: 30px 10px 0 60px;                
+            margin: 30px 10px 0 60px;
         }
     }
-    
     nav {
         width: $cols9 + $gutter;
-        
-        #block-system-main-menu, 
+        #block-system-main-menu,
         #block-menu-menu-main-menu-authenticated-,
-        #block-menu-menu-main-menu-administrator- {                
-            padding: 68px 0 5px 0;
+        #block-menu-menu-main-menu-administrator- {
             width: $cols9 + $gutter;
-            
-            h2, li {
+            padding: 68px 0 5px 0;
+            h2,
+            li {
                 font-size: 1.05em;
             }
-            
             h2 {
                 display: inline;
                 margin-left: $gutter;
             }
         }
-    
-        #block-system-user-menu, #block-user-login {
+        #block-system-user-menu,
+        #block-user-login {
             width: $cols9 + $gutter;
-            
             h2 {
                 display: inline;
             }
         }
-        
         #block-user-login {
             div.content {
                 margin-left: 222px;
@@ -59,53 +52,45 @@ footer {
     margin-left: $cols5 + $gutter + 1.1;
 }
 
-div#main {    
+div#main {
     div#page-title {
-        width: $cols5;
-        padding-top: $cols1;
-        float: left;
-        height: 100%;
         position: absolute;
-        
+        float: left;
+        width: $cols5;
+        height: 100%;
+        padding-top: $cols1;
         div.title-content {
             margin-left: 2 * $gutter - 7;
-            
             h1 {
                 font-size: 2.2em;
-                border-bottom: 2px dashed $white;
                 padding: 0 0 7px 7px;
+                border-bottom: 2px dashed $white;
             }
         }
     }
-    
-    div#main-content {        
+    div#main-content {
         div.region-content {
-            margin-left: $cols5;
             min-height: 455px;
-        } 
-    
+            margin-left: $cols5;
+        }
         div.content {
             margin-left: $cols1;
             padding: $cols1 0;
-            
             div.content {
                 margin: 0;
                 padding: 0;
             }
-            
             div.group-sidebar {
                 position: absolute;
-                top: 200px;              
+                top: 200px;
                 margin: 0;
                 margin-left: -$cols5;
                 padding: 0;
-                border-top: 0px none;
-                
-                
+                border-top: 0 none;
                 div.field {
                     width: $cols4;
                 }
-                div.field-name-field-sidebar-title div.field-item {               
+                div.field-name-field-sidebar-title div.field-item {
                     padding: 0;
                     background: $darkgreen;
                 }
@@ -115,123 +100,108 @@ div#main {
                 }
             }
         }
-        
         p.nextStep {
             display: block;
         }
     }
-
     div#sidebar-frame {
         width: $gutter;
-        margin-left: $cols5;
         height: 100%;
+        margin-left: $cols5;
         background: url('../images/sidebar-bg.png') top left no-repeat;
     }
 }
 
-body.node-type-homepage {    
-    div#main {        
+body.node-type-homepage {
+    div#main {
         div#sidebar-frame {
             display: inherit;
         }
-        
         div#main-content {
             div.region-content {
                 width: auto;
                 margin: 0;
             }
-            
             div.content {
-                padding: 0;
                 margin: 0;
-            }             
+                padding: 0;
+            }
         }
     }
-    
     div.group-dividertab {
         display: none;
     }
-    
     div.group-content {
-        width: $cols5;
         float: left;
-        min-height: 395px;    
-        
+        width: $cols5;
+        min-height: 395px;
         div.field {
             margin-left: $cols1;
-        } 
+        }
     }
-    
     div.group-images {
         margin-left: $cols5;
     }
 }
 
-body.page-courses, 
-body.page-instruct, 
+body.page-courses,
+body.page-instruct,
 body.page-upcoming {
     div#main-content {
         div.view-header {
             position: absolute;
-            top: 210px;   
+            top: 210px;
             margin-left: -$cols5;
-            
-            h4 {            
+            h4 {
                 color: $white!important;
             }
-              
             li {
                 float: none;
                 width: auto;
             }
         }
-        
         div.view-content {
             padding-top: 0;
         }
     }
 }
 
-body.page-civicrm-event { 
-    div#main-content {   
-        div.event_type-section, div.register_link-top, 
+body.page-civicrm-event {
+    div#main-content {
+        div.event_type-section,
+        div.register_link-top,
         div.event_date_time-section {
             position: absolute;
-            margin-left: -$cols5!important;
             float: none!important;
             width: $cols4;
+            margin-left: -$cols5!important;
         }
-        
         div.event_type-section {
             top: 200px;
         }
-        
         div.register_link-top {
             top: 340px;
             margin-top: 0!important;
         }
-        
         div.event_date_time-section {
             top: 240px;
-            
             div.content {
-                
-                span, abbr {
+                span,
+                abbr {
                     display: block;
                     padding: 0;
                 }
-                
                 abbr {
-                    color: $white;
                     font-size: 1.1em;
-                }            
+                    color: $white;
+                }
             }
         }
     }
 }
 
 div.crm-actions-ribbon {
+    position: absolute;
     display: block;
     margin-top: -30px!important;
-    position: absolute;
 }

@@ -12,20 +12,18 @@ html.ie6 {
             margin-left: -$cols4;
         }
     }
-    
     div#main {
         div#content-inner {
             background: url('../images/ie-bg.png') top left repeat-y #e5f4f3;
         }
     }
-
     body.node-type-homepage {
         div.group-content {
             width: 333px;
         }
     }
     body.node-type-homepage div.group-images {
-        margin-left: 0;
         float: left;
+        margin-left: 0;
     }
 }

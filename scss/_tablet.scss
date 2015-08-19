@@ -4,96 +4,81 @@
 
 header {
     margin: 0;
-
     #logo {
         margin: 0 0 0 $gutter;
     }
-    
     hgroup {
         margin: 0 0 0 $gutter;
     }
-       
     nav {
         float: right;
         width: $cols7 - $gutter;
-                        
-        div.content, ul, li {
+        div.content,
+        ul,
+        li {
             display: inline;
         }
-        
-        #block-system-main-menu, 
+        #block-system-main-menu,
         #block-menu-menu-main-menu-authenticated-,
-        #block-menu-menu-main-menu-administrator-  {
-            float: none; 
+        #block-menu-menu-main-menu-administrator- {
+            float: none;
             padding: 36px 0 5px 0;
             border-bottom: 3px solid $darkgreen;
-            
-            h2, li {
+            h2,
+            li {
                 padding: 0 0 0 1.1em;
             }
-            
             li {
                 display: inline;
             }
-        }        
-        
-        #block-system-user-menu, #block-user-login {        
-            text-align: right;
-            position: absolute;
-            top: 10px;
-            width: $cols7 - $gutter;
-            clear: none;
-            padding: 0;
-            z-index: 2000;
         }
-        
+        #block-system-user-menu,
         #block-user-login {
-                        
+            position: absolute;
+            z-index: 2000;
+            top: 10px;
+            clear: none;
+            width: $cols7 - $gutter;
+            padding: 0;
+            text-align: right;
+        }
+        #block-user-login {
             div.content {
                 display: block;
                 margin: 0 0 0 30px;
             }
-            
-            form {            
-                position: absolute;    
-                z-index: 2000; 
+            form {
+                position: absolute;
+                z-index: 2000;
                 width: $cols6;
                 padding: 0 1em 0 0;
             }
-            
             label {
                 display: inline;
-                padding: 0 0.5em 0 0;
+                padding: 0 .5em 0 0;
             }
-            
             span.form-required {
                 display: none;
             }
-            
             input.form-text {
                 width: $cols3!important;
             }
-            
-            
-            ul li {            
-                text-transform: uppercase;
+            ul li {
                 font-family: $sansseriffont;
-                color: $darktext; 
-            
+                text-transform: uppercase;
+                color: $darktext;
                 &::before {
-                    content: "\\\\ ";
+                    content: '\\\\ ';
                 }
-            
                 a {
-                    color: $darktext;                
                     text-decoration: none;
-                
+                    color: $darktext;
                     &:hover {
                         text-decoration: underline;
                         color: $hovertext;
                     }
                 }
-            }                     
+            }
         }
     }
 }
@@ -104,27 +89,22 @@ footer {
 
 div#main {
     padding: 20px 0;
-    
     div#page-title {
         width: $cols9 + $gutter;
-        
         h1 {
             font-size: 1.9em;
         }
     }
-    
-    div#content-header {        
+    div#content-header {
         div.tabs {
             top: -1.5em;
         }
     }
-    
-    div#main-content {        
+    div#main-content {
         div.region-content {
             width: $cols9 + $gutter;
         }
     }
-
     div#sidebar-frame {
         width: $cols9 + $gutter;
         height: $gutter;
@@ -132,14 +112,13 @@ div#main {
     }
 }
 
-body.node-type-homepage {   
+body.node-type-homepage {
     div.group-content {
         width: $cols9 + $gutter;
     }
-    
     div.group-images {
         width: $cols9 + $gutter;
-        height: 455px; 
+        height: 455px;
     }
 }
 
@@ -147,76 +126,67 @@ body.node-type-standard {
     div#main-content {
         div.field-type-image {
             display: block;
-            
             div.field-item {
-                border: 6px solid #fff;
-                clear: right;
-                float: right;
                 font-size: 10px;
                 line-height: 10px;
+                float: right;
+                clear: right;
                 margin: 0 0 2em 2em;
-                
+                border: 6px solid #fff;
                 a {
                     font-size: 1em;
                     line-height: 1em;
                 }
-                
                 img {
                     border: 1px solid $darktext;
                 }
-            } 
+            }
         }
     }
 }
 
-body.page-contact {    
-    div#main-content {            
-        div.contactPerson, div.contactPhone {
-            width: $cols4;
+body.page-contact {
+    div#main-content {
+        div.contactPerson,
+        div.contactPhone {
             float: left;
-            margin-right: $gutter;  
+            width: $cols4;
+            margin-right: $gutter;
         }
-
         div.form-item {
             clear: left;
-            
             label {
                 float: left;
-                margin-right: 0.7em;
-                text-align: right;
                 width: 11.5em;
+                margin-right: .7em;
+                text-align: right;
             }
-            
             input.form-text {
                 width: 380px!important;
             }
-                
             textarea {
                 float: left;
                 width: 380px!important;
             }
         }
-        
         div.form-actions {
             margin-left: 11em;
         }
     }
 }
 
-body.page-resources, 
+body.page-resources,
 body.page-resources-admin {
     div#main-content {
         div.view-leftcol {
             float: left;
-            margin: 0 $gutter 0 0;
             width: $cols4;
+            margin: 0 $gutter 0 0;
         }
-        
         div.view-rightcol {
             float: right;
-            width: $cols4;            
+            width: $cols4;
         }
-        
         div.views-row-odd {
             clear: left;
         }
@@ -229,7 +199,6 @@ body.page-reports {
             float: left;
             width: $cols4;
         }
-        
         div.views-row-odd {
             clear: left;
             margin-right: $gutter;
@@ -238,21 +207,19 @@ body.page-reports {
 }
 
 body.page-courses,
-body.page-instruct, 
+body.page-instruct,
 body.page-upcoming {
     div#main-content {
         div.views-row {
             float: left;
+            width: $cols4;
             margin: 0 $gutter $gutter 0;
             padding: 0 0 $gutter/2 0;
-            width: $cols4;
         }
-        
         div.views-row-odd {
             clear: left;
         }
-        
-        div.view-header {        
+        div.view-header {
             li {
                 float: left;
                 width: $cols3;
@@ -263,85 +230,71 @@ body.page-upcoming {
 
 body.page-civicrm-event {
     div#main-content {
-        
-        input.form-text, textarea {
+        input.form-text,
+        textarea {
             width: auto!important;
         }
-        
         div.event_address-section {
             float: right;
             width: $cols3 + $gutter;
-            
             div.label {
-                text-align: left!important;
                 float: none!important;
+                text-align: left!important;
             }
         }
-        
         div.event_date_time-section {
             width: 74%!important;
         }
-        
         div.event_map-section {
             width: $cols5;
-                    
             div#google_map {
                 width: $cols5!important;
             }
         }
-        
         div.register_link-top {
-           clear: none!important;
-           float: right!important;
-           margin-top: -0.7em!important;
-           margin-left: 0!important;
+            float: right!important;
+            clear: none!important;
+            margin-top: -.7em!important;
+            margin-left: 0!important;
         }
-        
-        div.price_set-section, div.email-section {
+        div.price_set-section,
+        div.email-section {
             div.label {
                 width: 10.5em!important;
             }
         }
-        
-        div.price_set-section {        
+        div.price_set-section {
             div.content {
                 margin-left: 11.5em!important;
             }
         }
-        
         div.event-info {
             div.messages {
                 clear: both;
-            }            
+            }
         }
-        
         div.crm-event-register-form-block,
         div.crm-event-confirm-form-block fieldset {
             div.label {
+                font-size: .9em!important;
                 float: left!important;
-                font-size: 0.9em!important;
+                width: 10.5em!important;
                 text-align: right!important;
-                width: 10.5em!important;                
-            }            
-            
+            }
             p {
-                margin: 2em 0 0.7em 40px!important;
-                
+                margin: 2em 0 .7em 40px!important;
                 &.form-required {
                     margin: 0 0 1.5em 40px!important;
                 }
             }
-                
-            div.participant_note-section {                
+            div.participant_note-section {
                 span {
-                    margin: 0 0 0.7em 40px;
+                    margin: 0 0 .7em 40px;
                 }
-                
                 textarea {
                     width: 400px!important;
                 }
             }
-            
             div.crm-submit-buttons {
                 margin-left: 10em;
             }
@@ -352,37 +305,32 @@ body.page-civicrm-event {
 body.page-user-edit {
     div#crm-container {
         div.label {
+            font-size: .9em!important;
             float: left!important;
-            font-size: 0.9em!important;
+            width: 10.5em!important;
             text-align: right!important;
-            width: 10.5em!important;                
         }
-        
         p {
-            margin: 2em 0 0.7em 40px!important;
-             
+            margin: 2em 0 .7em 40px!important;
             &.form-required {
                 margin: 1em 0 1em 40px!important;
             }
-        } 
-    } 
-    
+        }
+    }
     div#main-content {
-        input.form-text, textarea {
+        input.form-text,
+        textarea {
             width: auto!important;
         }
-        
         div.password-confirm {
             float: right;
         }
-        
-        input#edit-current-pass, 
-        input.password-field, 
+        input#edit-current-pass,
+        input.password-field,
         input.password-confirm {
             width: 14.5em!important;
         }
     }
-            
     div#edit-actions {
         margin-left: 10em;
     }
@@ -390,32 +338,26 @@ body.page-user-edit {
 
 body.node-type-webform {
     div#main-content {
-    
         p.form-required {
             margin: 1em 0 1em 40px!important;
         }
-    
-        div.form-item {            
+        div.form-item {
             label {
                 float: left;
-                margin-right: 0.7em;
-                text-align: right;
                 width: 10.5em!important;
+                margin-right: .7em;
+                text-align: right;
             }
-            
             p {
-                margin: 2em 0 0.7em 40px!important;
+                margin: 2em 0 .7em 40px!important;
             }
-            
             div.form-textarea-wrapper {
                 float: left;
-                
                 textarea {
                     width: 400px;
                 }
             }
         }
-            
         div.form-actions {
             margin-left: 10em;
         }
