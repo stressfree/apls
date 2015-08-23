@@ -230,9 +230,11 @@ body.page-upcoming {
 
 body.page-civicrm-event {
     div#main-content {
-        input.form-text,
-        textarea {
+        input.form-text {
             width: auto!important;
+        }
+        textarea {
+            width: 380px!important;
         }
         div.event_address-section {
             float: right;
